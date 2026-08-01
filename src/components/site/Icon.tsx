@@ -1,7 +1,7 @@
 import * as Icons from "lucide-react";
 import type { ComponentType } from "react";
 
-type IconProps = { className?: string; strokeWidth?: number };
+type IconProps = { className?: string | undefined; strokeWidth?: number | undefined };
 
 export function Icon({
   name,
@@ -9,8 +9,8 @@ export function Icon({
   strokeWidth = 1.9,
 }: {
   name: string;
-  className?: string;
-  strokeWidth?: number;
+  className?: string | undefined;
+  strokeWidth?: number | undefined;
 }) {
   const map = Icons as unknown as Record<string, ComponentType<IconProps>>;
   const Cmp = map[name] ?? Icons.Circle;
