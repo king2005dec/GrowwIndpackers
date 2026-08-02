@@ -34,18 +34,7 @@ const FLOATERS = [
 ];
 
 export function Hero() {
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setDone(false);
-    window.setTimeout(() => {
-      setLoading(false);
-      setDone(true);
-    }, 1400);
-  };
 
   return (
     <section id="home" className="hero-gradient relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
