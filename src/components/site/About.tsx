@@ -44,7 +44,7 @@ export function About() {
               your invoice is explained upfront.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              We are the only mover in India that locks your AI-generated quote at booking — so the
+              We are the only mover in India that locks your app quote at booking — so the
               number you see is the number you pay.
             </p>
           </Reveal>

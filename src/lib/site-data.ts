@@ -10,7 +10,7 @@ export const CONTACT = {
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Download App", href: "#pricing" },
   { label: "Cities", href: "#cities" },
   { label: "About", href: "#about" },
   { label: "Gallery", href: "#gallery" },
@@ -48,7 +48,7 @@ export const WHY_US = [
   {
     icon: "IndianRupee",
     title: "Honest pricing",
-    body: "AI-generated quotes locked at booking. No surprise labour or toll charges.",
+    body: "Quotes locked at booking. No surprise labour or toll charges.",
   },
   {
     icon: "Headphones",
@@ -130,7 +130,7 @@ export const REVIEWS = [
     name: "Meera Joshi",
     city: "Surat → Mumbai",
     stars: 5,
-    text: "The AI estimate was within ₹400 of the final invoice. Zero haggling at the doorstep, which is rare in this industry.",
+    text: "The app estimate was within ₹400 of the final invoice. Zero haggling at the doorstep, which is rare in this industry.",
   },
 ];
 
@@ -149,17 +149,6 @@ export const CITIES = [
   { name: "Surat", moves: "330+ moves" },
 ];
 
-export const AI_FEATURES = [
-  { icon: "Route", title: "AI route optimisation", body: "Live traffic and toll modelling picks the fastest legal route." },
-  { icon: "LineChart", title: "AI price prediction", body: "Quotes trained on 100k+ real invoices, accurate within 5%." },
-  { icon: "Bot", title: "AI move assistant", body: "Chat answers on packing, timelines and documents, 24×7." },
-  { icon: "ScanSearch", title: "Inventory detection", body: "Scan a room on video and get an itemised inventory list." },
-  { icon: "ShieldAlert", title: "Damage prediction", body: "Flags fragile items that need crating before loading." },
-  { icon: "BookOpen", title: "AI packing guide", body: "Room-wise packing plan generated for your exact home." },
-  { icon: "Timer", title: "ETA prediction", body: "Continuously updated arrival window shared with you." },
-  { icon: "Fingerprint", title: "Fraud detection", body: "Blocks unverified vendors and inflated doorstep charges." },
-];
-
 export const LOVE_US = [
   { icon: "Navigation", label: "Live tracking" },
   { icon: "ShieldCheck", label: "Secure packing" },
@@ -170,7 +159,7 @@ export const LOVE_US = [
 ];
 
 export const PROCESS = [
-  { step: "01", title: "Book in 60 seconds", body: "Share your route and home size, get an instant AI estimate." },
+  { step: "01", title: "Book in 60 seconds", body: "Share your route and home size in the app and get an instant estimate." },
   { step: "02", title: "Expert packing", body: "Crew arrives with materials and barcodes every carton." },
   { step: "03", title: "Tracked transport", body: "GPS-tracked, insured vehicles with checkpoint updates." },
   { step: "04", title: "Delivery & setup", body: "Unpacking, furniture assembly and debris removal included." },
@@ -183,7 +172,7 @@ export const CITY_OPTIONS = CITIES.map((c) => c.name);
 export const FAQS = [
   {
     q: "How is my moving cost calculated?",
-    a: "Our AI engine prices your move on distance, home size, floor and lift access, packing material required, vehicle type and the season. You see the full breakup before paying anything.",
+    a: "The GrowwIndia app prices your move on distance, home size, floor and lift access, packing material required, vehicle type and the season. You see the full breakup before paying anything.",
   },
   {
     q: "Is the price I see final?",
