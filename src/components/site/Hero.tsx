@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -12,7 +11,7 @@ import {
   Truck,
   Navigation,
   Package,
-  Loader2,
+  Smartphone,
 } from "lucide-react";
 import { CONTACT, HOUSE_SIZES, STATS } from "@/lib/site-data";
 import { Counter } from "./Counter";
@@ -56,7 +55,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full glass-panel px-3.5 py-1.5 text-xs font-semibold text-primary-foreground">
             <Sparkles className="size-3.5 text-secondary" />
-            AI-powered relocation across 120+ Indian cities
+            Trusted relocation across 120+ Indian cities
           </span>
 
           <h1 className="mt-6 text-4xl leading-[1.08] font-extrabold text-primary-foreground sm:text-5xl lg:text-[3.65rem]">
@@ -66,7 +65,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            Trusted relocation partner with AI-powered instant pricing, verified movers, live
+            Trusted relocation partner with instant app pricing, verified movers, live
             tracking, secure packing and fully transparent pricing.
           </p>
 
