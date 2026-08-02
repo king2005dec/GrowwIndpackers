@@ -12,15 +12,15 @@ export function PromoBanner() {
             <div className="grid items-center gap-8 p-8 sm:p-12 lg:grid-cols-2 lg:pr-0">
               <div>
                 <span className="inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground">
-                  Limited offer
+                  First order offer
                 </span>
                 <h2 className="mt-4 text-3xl font-extrabold leading-tight text-primary-foreground sm:text-4xl">
-                  Move this month,
-                  <span className="block brand-gradient-text">get 15% off packing</span>
+                  First order?
+                  <span className="block brand-gradient-text">Get 20% off</span>
                 </h2>
                 <p className="mt-4 max-w-md text-base text-primary-foreground/75">
-                  Book any house or office move before the 30th and we waive 15% of the packing
-                  material cost — insurance and unpacking still included.
+                  New customers save a flat 20% on their first SwiftMove booking — packing
+                  material, insurance and unpacking still included.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
