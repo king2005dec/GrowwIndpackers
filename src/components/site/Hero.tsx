@@ -196,15 +196,8 @@ export function Hero() {
             >
               Book without the app
             </a>
+          </div>
 
-                <a
-                  href="#booking"
-                  className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-secondary py-3 text-sm font-semibold text-secondary-foreground"
-                >
-                  Lock this price <ArrowRight className="size-4" />
-                </a>
-              </motion.div>
-            )}
           </div>
         </motion.div>
       </div>
