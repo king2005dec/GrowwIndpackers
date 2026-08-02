@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, Phone, X, MessageCircle, User } from "lucide-react";
-import { CONTACT, NAV_LINKS } from "@/lib/site-data";
+import { Menu, X } from "lucide-react";
+import { NAV_LINKS } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 export function Header() {
