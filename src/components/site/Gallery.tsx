@@ -18,7 +18,7 @@ const SHOTS = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-20 sm:py-24">>
+    <section id="gallery" className="py-20 sm:py-24">
       <div className="section-shell">
         <SectionHeading
           eyebrow="Gallery"
