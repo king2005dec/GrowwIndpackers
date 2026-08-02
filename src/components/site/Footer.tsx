@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Youtube } from "lucide-react";
 import { CITIES, CONTACT, SERVICES } from "@/lib/site-data";
 
-const QUICK = ["Home", "About us", "Services", "Pricing", "Reviews", "Contact"];
+const QUICK = ["Home", "About us", "Services", "Download App", "Reviews", "Contact"];
 const COMPANY = ["Our story", "Careers", "Partner with us", "Press kit", "Blog"];
 const SUPPORT = ["Track my move", "Raise a claim", "Reschedule move", "Payment help", "Help centre"];
 
@@ -39,7 +39,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/65">
-              India&apos;s AI-powered packers &amp; movers network. Verified crews, insured
+              India&apos;s trusted packers &amp; movers network. Verified crews, insured
               shipments and pricing locked at booking — in 120+ cities.
             </p>
             <div className="mt-5 grid gap-2 text-sm">

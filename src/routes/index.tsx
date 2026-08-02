@@ -4,10 +4,9 @@ import { Hero } from "@/components/site/Hero";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { About } from "@/components/site/About";
 import { Services } from "@/components/site/Services";
-import { PriceCalculator } from "@/components/site/PriceCalculator";
+import { DownloadApp } from "@/components/site/DownloadApp";
 import { Reviews } from "@/components/site/Reviews";
 import { Cities } from "@/components/site/Cities";
-import { AiFeatures } from "@/components/site/AiFeatures";
 import { LoveUs } from "@/components/site/LoveUs";
 import { PromoBanner } from "@/components/site/PromoBanner";
 import { BookingForm } from "@/components/site/BookingForm";
@@ -19,9 +18,9 @@ import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { CONTACT, FAQS } from "@/lib/site-data";
 
-const TITLE = "SwiftMove | Packers & Movers in India — Instant AI Pricing";
+const TITLE = "SwiftMove | Packers & Movers in India — Book Your Move";
 const DESCRIPTION =
-  "Book verified packers & movers across 120+ Indian cities. Instant AI pricing, insured shipments, live GPS tracking and no hidden charges. Get a free estimate in 60 seconds.";
+  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, insured shipments, live GPS tracking and no hidden charges. Get a free estimate in 60 seconds.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -89,10 +88,9 @@ function Index() {
         <WhyChooseUs />
         <About />
         <Services />
-        <PriceCalculator />
+        <DownloadApp />
         <Reviews />
         <Cities />
-        <AiFeatures />
         <LoveUs />
         <PromoBanner />
         <BookingForm />

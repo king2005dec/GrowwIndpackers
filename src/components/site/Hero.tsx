@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -12,7 +11,7 @@ import {
   Truck,
   Navigation,
   Package,
-  Loader2,
+  Smartphone,
 } from "lucide-react";
 import { CONTACT, HOUSE_SIZES, STATS } from "@/lib/site-data";
 import { Counter } from "./Counter";
@@ -34,18 +33,7 @@ const FLOATERS = [
 ];
 
 export function Hero() {
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setDone(false);
-    window.setTimeout(() => {
-      setLoading(false);
-      setDone(true);
-    }, 1400);
-  };
 
   return (
     <section id="home" className="hero-gradient relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
@@ -67,7 +55,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full glass-panel px-3.5 py-1.5 text-xs font-semibold text-primary-foreground">
             <Sparkles className="size-3.5 text-secondary" />
-            AI-powered relocation across 120+ Indian cities
+            Trusted relocation across 120+ Indian cities
           </span>
 
           <h1 className="mt-6 text-4xl leading-[1.08] font-extrabold text-primary-foreground sm:text-5xl lg:text-[3.65rem]">
@@ -77,7 +65,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            Trusted relocation partner with AI-powered instant pricing, verified movers, live
+            Trusted relocation partner with instant app pricing, verified movers, live
             tracking, secure packing and fully transparent pricing.
           </p>
 
@@ -145,131 +133,70 @@ export function Hero() {
             </div>
           ))}
 
-          <div className="relative rounded-2xl border border-white/15 bg-card p-6 shadow-card sm:p-7">
+          <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-card p-6 shadow-card sm:p-7">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-lg font-bold text-foreground">Instant Price Calculator</h2>
+                <h2 className="text-lg font-bold text-foreground">Want to know your price?</h2>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  AI estimate in seconds · no phone calls needed
+                  Download the GrowwIndia Packers &amp; Movers app
                 </p>
               </div>
               <span className="grid size-11 place-items-center rounded-lg bg-accent text-primary">
-                <Sparkles className="size-5" />
+                <Smartphone className="size-5" />
               </span>
             </div>
 
-            <form className="mt-5 grid gap-3.5" onSubmit={submit}>
-              <div className="grid gap-3.5 sm:grid-cols-2">
-                <label className="block">
-                  <span className="text-xs font-semibold text-muted-foreground">Moving from</span>
-                  <div className="mt-1.5 flex items-center gap-2 rounded-lg border border-input bg-background px-3 py-2.5 focus-within:border-ring">
-                    <MapPin className="size-4 text-primary" />
-                    <input
-                      required
-                      placeholder="Mumbai"
-                      className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </label>
-                <label className="block">
-                  <span className="text-xs font-semibold text-muted-foreground">Moving to</span>
-                  <div className="mt-1.5 flex items-center gap-2 rounded-lg border border-input bg-background px-3 py-2.5 focus-within:border-ring">
-                    <MapPin className="size-4 text-secondary" />
-                    <input
-                      required
-                      placeholder="Pune"
-                      className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </label>
-                <label className="block">
-                  <span className="text-xs font-semibold text-muted-foreground">House size</span>
-                  <select
-                    required
-                    defaultValue="2 BHK"
-                    className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none focus:border-ring"
-                  >
-                    {HOUSE_SIZES.map((h) => (
-                      <option key={h}>{h}</option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block">
-                  <span className="text-xs font-semibold text-muted-foreground">Move date</span>
-                  <div className="mt-1.5 flex items-center gap-2 rounded-lg border border-input bg-background px-3 py-2.5 focus-within:border-ring">
-                    <Calendar className="size-4 text-primary" />
-                    <input
-                      required
-                      type="date"
-                      className="w-full bg-transparent text-sm outline-none"
-                    />
-                  </div>
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:scale-[1.01] disabled:opacity-70"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="size-4 animate-spin" /> Calculating best price…
-                  </>
-                ) : (
-                  <>
-                    Get Estimate <ArrowRight className="size-4" />
-                  </>
-                )}
-              </button>
-            </form>
-
-            {loading && (
-              <div className="mt-5 grid gap-2">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="h-4 animate-pulse rounded-md bg-muted" />
-                ))}
-              </div>
-            )}
-
-            {done && !loading && (
+            {/* running truck */}
+            <div className="relative mt-6 h-20 overflow-hidden rounded-xl bg-surface">
+              <div className="absolute bottom-5 left-0 right-0 h-px bg-border" />
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="mt-5 rounded-xl bg-primary p-5 text-primary-foreground"
+                className="absolute bottom-6"
+                initial={{ x: "-20%" }}
+                animate={{ x: "115%" }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: "linear" }}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/60">
-                  Your AI estimate
-                </p>
-                <p className="mt-1.5 text-3xl font-extrabold">
-                  ₹<Counter to={8000} />
-                  {" – ₹"}
-                  <Counter to={20000} />
-                </p>
-                <ul className="mt-4 grid gap-2 text-sm">
-                  <li className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="text-primary-foreground/70">You save</span>
-                    <span className="font-semibold text-success">₹3,200 vs market</span>
-                  </li>
-                  <li className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="text-primary-foreground/70">Delivery time</span>
-                    <span className="font-semibold">Next day</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span className="text-primary-foreground/70">Insurance</span>
-                    <span className="font-semibold">Included up to ₹10L</span>
-                  </li>
-                </ul>
-                <a
-                  href="#booking"
-                  className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-secondary py-3 text-sm font-semibold text-secondary-foreground"
+                <motion.span
+                  className="flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-xs font-bold text-primary-foreground"
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 0.45, repeat: Infinity }}
                 >
-                  Lock this price <ArrowRight className="size-4" />
-                </a>
+                  <Truck className="size-5" /> Delivering
+                </motion.span>
               </motion.div>
-            )}
+            </div>
+
+            <ul className="mt-5 grid gap-2.5">
+              {[
+                { icon: Package, text: "Instant price calculator inside the app" },
+                { icon: Navigation, text: "Live tracking from pickup to delivery" },
+                { icon: ShieldCheck, text: "Insured moves up to ₹10 lakh" },
+              ].map((r) => (
+                <li key={r.text} className="flex items-center gap-3 text-sm text-foreground">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-accent text-primary">
+                    <r.icon className="size-4" />
+                  </span>
+                  {r.text}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://play.google.com/store/search?q=GrowwIndia%20Packers%20Movers&c=apps"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-primary py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:scale-[1.01]"
+            >
+              <Smartphone className="size-4" /> Download the app
+              <ArrowRight className="size-4" />
+            </a>
+            <a
+              href="#booking"
+              className="mt-2.5 flex items-center justify-center gap-2 rounded-lg border border-border py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
+            >
+              Book without the app
+            </a>
           </div>
+
         </motion.div>
       </div>
     </section>
