@@ -88,10 +88,9 @@ function Index() {
         <WhyChooseUs />
         <About />
         <Services />
-        <PriceCalculator />
+        <DownloadApp />
         <Reviews />
         <Cities />
-        <AiFeatures />
         <LoveUs />
         <PromoBanner />
         <BookingForm />
