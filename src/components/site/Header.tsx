@@ -118,7 +118,7 @@ export function Header() {
               ))}
             </nav>
             <div className="mt-3 grid gap-2">
-              <
+              <a
                 href="#booking"
                 onClick={() => setOpen(false)}
                 className="rounded-lg bg-secondary px-3 py-2.5 text-center text-sm font-semibold text-secondary-foreground"
