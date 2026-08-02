@@ -13,7 +13,7 @@ export const NAV_LINKS = [
   { label: "Pricing", href: "#pricing" },
   { label: "Cities", href: "#cities" },
   { label: "About", href: "#about" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 

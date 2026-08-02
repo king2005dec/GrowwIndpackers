@@ -82,36 +82,8 @@ export function Header() {
 
         <div className="hidden items-center gap-2 xl:flex">
           <a
-            href={CONTACT.phoneHref}
-            className={cn(
-              "flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
-              scrolled
-                ? "text-primary hover:bg-accent"
-                : "text-primary-foreground hover:bg-white/10",
-            )}
-          >
-            <Phone className="size-4" /> {CONTACT.phone}
-          </a>
-          <a
-            href={CONTACT.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-2 rounded-lg bg-success px-3 py-2 text-sm font-semibold text-success-foreground shadow-soft transition-transform hover:scale-[1.03]"
-          >
-            <MessageCircle className="size-4" /> WhatsApp
-          </a>
-          <a
             href="#booking"
-            className={cn(
-              "flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
-              scrolled ? "text-primary hover:bg-accent" : "text-primary-foreground hover:bg-white/10",
-            )}
-          >
-            <User className="size-4" /> Login
-          </a>
-          <a
-            href="#booking"
-            className="rounded-lg bg-secondary px-4 py-2.5 text-sm font-semibold text-secondary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+            className="rounded-lg bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground shadow-glow transition-transform hover:scale-[1.03]"
           >
             Book Now
           </a>
@@ -145,14 +117,8 @@ export function Header() {
                 </a>
               ))}
             </nav>
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <a
-                href={CONTACT.phoneHref}
-                className="flex items-center justify-center gap-2 rounded-lg border border-border px-3 py-2.5 text-sm font-semibold text-primary"
-              >
-                <Phone className="size-4" /> Call
-              </a>
-              <a
+            <div className="mt-3 grid gap-2">
+              <
                 href="#booking"
                 onClick={() => setOpen(false)}
                 className="rounded-lg bg-secondary px-3 py-2.5 text-center text-sm font-semibold text-secondary-foreground"
