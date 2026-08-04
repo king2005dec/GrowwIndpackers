@@ -58,28 +58,10 @@ export function BookingForm() {
         />
 
         <Reveal className="mt-12">
-          <div className="relative mx-auto mb-6 h-20 max-w-3xl overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="absolute bottom-5 left-0 right-0 h-px bg-border" />
-            <div className="absolute bottom-[1.1rem] left-0 right-0 flex gap-5 px-3">
-              {Array.from({ length: 40 }).map((_, i) => (
-                <span key={i} className="h-0.5 w-5 shrink-0 rounded-full bg-muted" />
-              ))}
-            </div>
-            <motion.div
-              className="absolute bottom-6"
-              initial={{ x: "-20%" }}
-              animate={{ x: "115%" }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "linear" }}
-            >
-              <motion.span
-                className="flex items-center gap-2 rounded-lg bg-secondary px-3 py-2 text-xs font-bold text-secondary-foreground shadow-glow"
-                animate={{ y: [0, -2, 0] }}
-                transition={{ duration: 0.45, repeat: Infinity }}
-              >
-                <Truck className="size-5" /> Your truck is on the way
-              </motion.span>
-            </motion.div>
+          <div className="mx-auto mb-6 max-w-3xl">
+            <TruckRun />
           </div>
+
 
           <form
             onSubmit={handleSubmit(onSubmit)}
