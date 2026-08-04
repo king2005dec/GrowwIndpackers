@@ -275,3 +275,52 @@
     transform: rotate(360deg);
   }
 }
+
+/* ---- Truck animation (GPU-only transforms, no JS per-frame work) ---- */
+@keyframes truck-drive {
+  from {
+    transform: translate3d(-35%, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(100vw + 20%), 0, 0);
+  }
+}
+
+@keyframes truck-bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(0, -1.5px, 0);
+  }
+  60% {
+    transform: translate3d(0, -0.5px, 0);
+  }
+}
+
+@keyframes road-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes exhaust-puff {
+  from {
+    transform: translate3d(-2px, 0, 0) scale(0.6);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate3d(-14px, -10px, 0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .truck-scene * {
+    animation: none !important;
+  }
+}
