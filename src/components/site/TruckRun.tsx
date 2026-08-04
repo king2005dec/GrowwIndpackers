@@ -76,7 +76,7 @@ export function TruckRun({ label = "Your truck is on the way" }: { label?: strin
                   <g
                     style={{
                       transformOrigin: `${cx}px 46px`,
-                      animation: "spin 0.45s linear infinite",
+                      animation: "wheel-spin 0.45s linear infinite",
                     }}
                   >
                     <rect x={cx - 0.6} y={40} width="1.2" height="12" fill="oklch(0.6 0.01 264)" />

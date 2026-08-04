@@ -269,3 +269,9 @@
     background: oklch(1 0 0 / 0.2);
   }
 }
+
+@keyframes wheel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
