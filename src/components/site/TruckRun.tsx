@@ -38,14 +38,17 @@ export const TruckRun = memo(function TruckRun({
 
       {/* driving truck */}
       <div
-        className="absolute bottom-5 left-0 sm:bottom-6"
+        className="absolute bottom-5 left-0 w-full sm:bottom-6"
         style={{
           animation: "truck-drive 6s linear infinite",
           willChange: "transform",
         }}
         aria-hidden="true"
       >
-        <div style={{ animation: "truck-bob 0.5s ease-in-out infinite" }}>
+        <div
+          className="w-max -translate-x-full"
+          style={{ animation: "truck-bob 0.5s ease-in-out infinite" }}
+        >
           <div className="relative">
             {[0, 0.35, 0.7].map((d) => (
               <span

@@ -279,10 +279,10 @@
 /* ---- Truck animation (GPU-only transforms, no JS per-frame work) ---- */
 @keyframes truck-drive {
   from {
-    transform: translate3d(-35%, 0, 0);
+    transform: translate3d(-6%, 0, 0);
   }
   to {
-    transform: translate3d(calc(100vw + 20%), 0, 0);
+    transform: translate3d(106%, 0, 0);
   }
 }
 
