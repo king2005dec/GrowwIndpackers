@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { motion } from "framer-motion";
-import { CheckCircle2, Loader2, Send, Truck } from "lucide-react";
+import { CheckCircle2, Loader2, Send } from "lucide-react";
 
 import { CITY_OPTIONS, HOUSE_SIZES } from "@/lib/site-data";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
+import { TruckRun } from "./TruckRun";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
