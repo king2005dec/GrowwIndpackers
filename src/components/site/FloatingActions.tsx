@@ -29,13 +29,13 @@ export function FloatingActions() {
         <div className="grid grid-cols-3 gap-2">
           <a
             href="#booking"
-            className="rounded-lg bg-secondary py-3 text-center text-sm font-semibold text-secondary-foreground"
+            className="btn btn-secondary btn-sm btn-block"
           >
             Book Now
           </a>
           <a
             href={CONTACT.phoneHref}
-            className="flex items-center justify-center gap-1.5 rounded-lg bg-primary py-3 text-sm font-semibold text-primary-foreground"
+            className="btn btn-primary btn-sm btn-block"
           >
             <Phone className="size-4" /> Call
           </a>
@@ -43,7 +43,7 @@ export function FloatingActions() {
             href={CONTACT.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center gap-1.5 rounded-lg bg-success py-3 text-sm font-semibold text-success-foreground"
+            className="btn btn-success btn-sm btn-block"
           >
             <MessageCircle className="size-4" /> Chat
           </a>

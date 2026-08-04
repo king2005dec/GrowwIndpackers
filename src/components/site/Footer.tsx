@@ -133,7 +133,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="rounded-lg bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-transform hover:scale-[1.03]"
+                className="btn btn-secondary btn-sm"
               >
                 Subscribe
               </button>
