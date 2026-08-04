@@ -25,7 +25,7 @@ export function PromoBanner() {
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
                     href="#booking"
-                    className="group inline-flex items-center gap-2 rounded-lg bg-secondary px-6 py-3.5 text-sm font-semibold text-secondary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                    className="btn btn-secondary group"
                   >
                     Book Now
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -34,7 +34,7 @@ export function PromoBanner() {
                     href={CONTACT.whatsapp}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-success px-6 py-3.5 text-sm font-semibold text-success-foreground transition-transform hover:scale-[1.03]"
+                    className="btn btn-success"
                   >
                     <MessageCircle className="size-4" /> WhatsApp
                   </a>

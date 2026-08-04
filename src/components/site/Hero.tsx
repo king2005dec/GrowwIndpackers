@@ -72,7 +72,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#booking"
-              className="group inline-flex items-center gap-2 rounded-lg bg-secondary px-6 py-3.5 text-sm font-semibold text-secondary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+              className="btn btn-secondary group"
             >
               Book Now
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -81,13 +81,13 @@ export function Hero() {
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-success px-6 py-3.5 text-sm font-semibold text-success-foreground shadow-soft transition-transform hover:scale-[1.03]"
+              className="btn btn-success"
             >
               <MessageCircle className="size-4" /> WhatsApp
             </a>
             <a
               href={CONTACT.phoneHref}
-              className="inline-flex items-center gap-2 rounded-lg glass-panel px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-white/20"
+              className="btn btn-glass"
             >
               <Phone className="size-4" /> Call Now
             </a>
@@ -184,14 +184,14 @@ export function Hero() {
               href="https://play.google.com/store/search?q=GrowwIndia%20Packers%20Movers&c=apps"
               target="_blank"
               rel="noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-primary py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:scale-[1.01]"
+              className="btn btn-primary btn-block mt-6"
             >
               <Smartphone className="size-4" /> Download the app
               <ArrowRight className="size-4" />
             </a>
             <a
               href="#booking"
-              className="mt-2.5 flex items-center justify-center gap-2 rounded-lg border border-border py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
+              className="btn btn-outline btn-block mt-2.5"
             >
               Book without the app
             </a>

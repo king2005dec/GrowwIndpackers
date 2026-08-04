@@ -83,7 +83,7 @@ export function Header() {
         <div className="hidden items-center gap-2 xl:flex">
           <a
             href="#booking"
-            className="rounded-lg bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+            className="btn btn-secondary btn-sm"
           >
             Book Now
           </a>
@@ -121,7 +121,7 @@ export function Header() {
               <a
                 href="#booking"
                 onClick={() => setOpen(false)}
-                className="rounded-lg bg-secondary px-3 py-2.5 text-center text-sm font-semibold text-secondary-foreground"
+                className="btn btn-secondary btn-sm btn-block"
               >
                 Book Now
               </a>

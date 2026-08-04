@@ -65,7 +65,7 @@ export function About() {
           <Reveal delay={0.2}>
             <a
               href="#booking"
-              className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:scale-[1.03]"
+              className="btn btn-primary group mt-8"
             >
               Get your free survey
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

@@ -85,7 +85,7 @@ export function DownloadApp() {
                   href="https://play.google.com/store/search?q=GrowwIndia%20Packers%20Movers&c=apps"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-secondary py-3.5 text-sm font-semibold text-secondary-foreground transition-transform hover:scale-[1.02]"
+                  className="btn btn-secondary btn-block mt-2"
                 >
                   <Smartphone className="size-4" /> Get it on Google Play
                 </a>
@@ -93,13 +93,13 @@ export function DownloadApp() {
                   href="https://apps.apple.com/search?term=GrowwIndia%20Packers%20Movers"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg glass-panel py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-white/20"
+                  className="btn btn-glass btn-block"
                 >
                   <Apple className="size-4" /> Download on the App Store
                 </a>
                 <a
                   href="#booking"
-                  className="flex items-center justify-center gap-2 rounded-lg border border-white/15 py-3 text-sm font-semibold text-primary-foreground/85 hover:bg-white/10"
+                  className="btn btn-glass btn-block"
                 >
                   Or book without the app <ArrowRight className="size-4" />
                 </a>
