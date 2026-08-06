@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
+import { OfferMarquee } from "@/components/site/OfferMarquee";
 import { Hero } from "@/components/site/Hero";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { About } from "@/components/site/About";
@@ -18,16 +19,16 @@ import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { CONTACT, FAQS } from "@/lib/site-data";
 
-const TITLE = "SwiftMove | Packers & Movers in India — Book Your Move";
+const TITLE = "GrowwIndia | Packers & Movers in India — Book Your Move";
 const DESCRIPTION =
-  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, careful packing, live GPS tracking and no hidden charges. Get a free estimate in 60 seconds.";
+  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, careful packing, tracking updates and no hidden charges. Get a free estimate in 60 seconds.";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "MovingCompany",
-      name: "SwiftMove Logistics",
+      name: "GrowwIndia Logistics",
       description: DESCRIPTION,
       telephone: "+91-98765-43210",
       email: CONTACT.email,
@@ -85,6 +86,7 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <OfferMarquee />
         <WhyChooseUs />
         <About />
         <Services />

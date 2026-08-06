@@ -2,8 +2,8 @@ export const CONTACT = {
   phone: "+91 98765 43210",
   phoneHref: "tel:+919876543210",
   whatsapp:
-    "https://wa.me/919876543210?text=Hi%20SwiftMove%2C%20I%20need%20a%20moving%20quote.",
-  email: "hello@swiftmove.in",
+    "https://wa.me/919876543210?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
+  email: "hello@growwindia.in",
   office: "3rd Floor, Prestige Tech Park, Marathahalli, Bengaluru 560103",
 };
 
@@ -42,8 +42,8 @@ export const WHY_US = [
   },
   {
     icon: "MapPin",
-    title: "Live GPS tracking",
-    body: "Follow your truck in real time and share the tracking link with family.",
+    title: "Tracking coming soon",
+    body: "Live shipment tracking is launching soon — until then your move manager updates you at every checkpoint.",
   },
   {
     icon: "IndianRupee",
@@ -69,7 +69,7 @@ export const CHECKLIST = [
 export const SERVICES = [
   { icon: "Home", title: "House shifting", body: "1RK to 5BHK villas moved door-to-door with full packing." },
   { icon: "Building2", title: "Office relocation", body: "Weekend IT and workstation moves with zero downtime." },
-  { icon: "Bike", title: "Bike transport", body: "Wooden-crated two-wheeler transport with GPS updates." },
+  { icon: "Bike", title: "Bike transport", body: "Wooden-crated two-wheeler transport with checkpoint updates." },
   { icon: "Car", title: "Car transport", body: "Single and multi-car carriers across 400+ routes." },
   { icon: "Warehouse", title: "Warehousing", body: "Racked, pest-controlled warehouse space by the day." },
   { icon: "Boxes", title: "Storage", body: "Short and long-term climate-controlled storage units." },
@@ -93,7 +93,7 @@ export const REVIEWS = [
     name: "Rohit Verma",
     city: "Bengaluru → Hyderabad",
     stars: 5,
-    text: "Live tracking was a game changer. I could see the truck the whole way and my move manager called at every checkpoint.",
+    text: "My move manager called at every checkpoint, so I always knew where the truck was. Nothing was left to guesswork.",
   },
   {
     name: "Sneha Iyer",
@@ -149,7 +149,7 @@ export const CITIES = [
 ];
 
 export const LOVE_US = [
-  { icon: "Navigation", label: "Live tracking" },
+  { icon: "Navigation", label: "Tracking soon" },
   { icon: "ShieldCheck", label: "Secure packing" },
   { icon: "Zap", label: "Instant booking" },
   { icon: "FileCheck2", label: "Careful handling" },
@@ -160,7 +160,7 @@ export const LOVE_US = [
 export const PROCESS = [
   { step: "01", title: "Book in 60 seconds", body: "Share your route and home size in the app and get an instant estimate." },
   { step: "02", title: "Expert packing", body: "Crew arrives with materials and barcodes every carton." },
-  { step: "03", title: "Tracked transport", body: "GPS-tracked vehicles with checkpoint updates." },
+  { step: "03", title: "Tracked transport", body: "Checkpoint updates at every stage of the journey." },
   { step: "04", title: "Delivery & setup", body: "Unpacking, furniture assembly and debris removal included." },
 ];
 
@@ -191,7 +191,7 @@ export const FAQS = [
   },
   {
     q: "How do I track my shipment?",
-    a: "You get a private tracking link over WhatsApp with the live vehicle location, driver details and status timeline.",
+    a: "Live tracking is coming soon. For now your move manager shares status updates and driver details over WhatsApp at every checkpoint.",
   },
   {
     q: "What if something gets damaged?",

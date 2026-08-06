@@ -79,18 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SwiftMove | Packers & Movers across India" },
+      { title: "GrowwIndia | Packers & Movers across India" },
       {
         name: "description",
         content:
-          "Verified packers and movers with instant app pricing and live tracking across 120+ Indian cities.",
+          "Verified packers and movers with instant app pricing across 120+ Indian cities.",
       },
-      { name: "author", content: "SwiftMove Logistics" },
-      { property: "og:title", content: "SwiftMove | Packers & Movers across India" },
+      { name: "author", content: "GrowwIndia Logistics" },
+      { property: "og:title", content: "GrowwIndia | Packers & Movers across India" },
       {
         property: "og:description",
         content:
-          "Verified packers and movers with instant app pricing and live tracking across 120+ Indian cities.",
+          "Verified packers and movers with instant app pricing across 120+ Indian cities.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

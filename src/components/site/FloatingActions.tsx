@@ -17,7 +17,7 @@ export function FloatingActions() {
         </a>
         <a
           href={CONTACT.phoneHref}
-          aria-label="Call SwiftMove"
+          aria-label="Call GrowwIndia"
           className="grid size-14 place-items-center rounded-full bg-secondary text-secondary-foreground shadow-card transition-transform hover:scale-110"
         >
           <Phone className="size-6" />

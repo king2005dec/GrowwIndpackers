@@ -19,7 +19,7 @@ export function PromoBanner() {
                   <span className="block brand-gradient-text">Get 20% off</span>
                 </h2>
                 <p className="mt-4 max-w-md text-base text-primary-foreground/75">
-                  New customers save a flat 20% on their first SwiftMove booking — packing
+                  New customers save a flat 20% on their first GrowwIndia booking — packing
                   material and unpacking still included.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">

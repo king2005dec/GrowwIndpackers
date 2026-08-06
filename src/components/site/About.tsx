@@ -11,7 +11,7 @@ export function About() {
           <div className="overflow-hidden rounded-2xl border border-border shadow-card">
             <img
               src={aboutTeam}
-              alt="SwiftMove crew carrying labelled moving cartons out of an apartment"
+              alt="GrowwIndia crew carrying labelled moving cartons out of an apartment"
               width={1200}
               height={1400}
               loading="lazy"
@@ -32,13 +32,13 @@ export function About() {
         <div>
           <Reveal>
             <span className="inline-flex rounded-full bg-accent px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
-              About SwiftMove
+              About GrowwIndia
             </span>
             <h2 className="mt-4 text-3xl font-extrabold text-foreground sm:text-4xl">
               A moving partner your family can actually trust
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              SwiftMove started in 2015 with four trucks in Bengaluru. Today we operate a vetted
+              GrowwIndia started in 2015 with four trucks in Bengaluru. Today we operate a vetted
               network of 500+ partner crews across 120 cities, moving more than 10,000 homes and
               offices a year. Every crew is verified, every carton is barcoded, and every rupee on
               your invoice is explained upfront.

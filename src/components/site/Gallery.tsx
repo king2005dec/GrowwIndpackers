@@ -10,7 +10,7 @@ import { SectionHeading } from "./SectionHeading";
 const SHOTS = [
   { src: galleryPacking, alt: "Mover wrapping a sofa in stretch film", label: "Packing", tall: true },
   { src: galleryLoading, alt: "Crew loading cartons into a moving truck", label: "Loading" },
-  { src: galleryFleet, alt: "Fleet of SwiftMove trucks at the depot", label: "Trucks" },
+  { src: galleryFleet, alt: "Fleet of GrowwIndia trucks at the depot", label: "Trucks" },
   { src: galleryOffice, alt: "Office relocation with crated equipment", label: "Office moves", tall: true },
   { src: aboutTeam, alt: "Uniformed movers carrying labelled cartons", label: "Our crews" },
   { src: promoFamily, alt: "Family settling into their new home", label: "Happy homes" },
@@ -23,7 +23,7 @@ export function Gallery() {
         <SectionHeading
           eyebrow="Gallery"
           title="Real moves. Real crews. Real care."
-          body="Photographs from recent SwiftMove jobs across Mumbai, Bengaluru and Delhi NCR."
+          body="Photographs from recent GrowwIndia jobs across Mumbai, Bengaluru and Delhi NCR."
         />
         <div className="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
           {SHOTS.map((s, i) => (

@@ -7,7 +7,7 @@ export function LoveUs() {
     <section className="border-y border-border bg-surface py-14">
       <div className="section-shell">
         <p className="text-center text-xs font-bold uppercase tracking-[0.24em] text-muted-foreground">
-          Why people love SwiftMove
+          Why people love GrowwIndia
         </p>
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {LOVE_US.map((l, i) => (

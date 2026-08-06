@@ -16,7 +16,7 @@ export function DownloadApp() {
         <SectionHeading
           eyebrow="Pricing on your phone"
           title="Want to calculate your price? Download the GrowwIndia Packers & Movers app"
-          body="Full price calculator, live order tracking and exclusive app-only discounts — all inside the GrowwIndia Packers & Movers app."
+          body="Full price calculator, order tracking (coming soon) and exclusive app-only discounts — all inside the GrowwIndia Packers & Movers app."
         />
 
         <Reveal className="mt-12">
