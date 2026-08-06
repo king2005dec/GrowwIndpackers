@@ -10,7 +10,7 @@ export function Cities() {
         <SectionHeading
           eyebrow="Popular cities"
           title="Local crews in every major Indian city"
-          body="Same standards, same pricing engine, same insurance — whichever city you move from."
+          body="Same standards, same pricing engine, same standards of care — whichever city you move from."
         />
         <div className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {CITIES.map((c, i) => (

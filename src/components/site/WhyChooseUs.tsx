@@ -10,7 +10,7 @@ export function WhyChooseUs() {
         <SectionHeading
           eyebrow="Why choose us"
           title="Every box protected. Every mile accountable."
-          body="We rebuilt the moving experience around verification, insurance and pricing you can check before you commit."
+          body="We rebuilt the moving experience around verification, careful handling and pricing you can check before you commit."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {WHY_US.map((item, i) => (

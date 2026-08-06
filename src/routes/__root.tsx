@@ -83,14 +83,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Verified packers and movers with instant AI pricing, insurance and live tracking across 120+ Indian cities.",
+          "Verified packers and movers with instant app pricing and live tracking across 120+ Indian cities.",
       },
       { name: "author", content: "SwiftMove Logistics" },
       { property: "og:title", content: "SwiftMove | Packers & Movers across India" },
       {
         property: "og:description",
         content:
-          "Verified packers and movers with instant AI pricing, insurance and live tracking across 120+ Indian cities.",
+          "Verified packers and movers with instant app pricing and live tracking across 120+ Indian cities.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

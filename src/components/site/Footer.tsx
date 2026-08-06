@@ -39,7 +39,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/65">
-              India&apos;s trusted packers &amp; movers network. Verified crews, insured
+              India&apos;s trusted packers &amp; movers network. Verified crews, careful
               shipments and pricing locked at booking — in 120+ cities.
             </p>
             <div className="mt-5 grid gap-2 text-sm">
