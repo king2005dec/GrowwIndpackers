@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import { CONTACT, HOUSE_SIZES, STATS } from "@/lib/site-data";
 import { Counter } from "./Counter";
+import { TruckRun } from "./TruckRun";
 
 const PILLS = [
   "100% Verified",
-  "Insurance Included",
   "Live Tracking",
   "Same Day Moving",
   "No Hidden Charges",
@@ -28,7 +28,7 @@ const FLOATERS = [
   { icon: BadgeCheck, label: "Verified crew", pos: "left-[-2.5rem] top-24", delay: "0s" },
   { icon: Truck, label: "Fleet ready", pos: "left-[-1.5rem] bottom-28", delay: "1.2s" },
   { icon: Navigation, label: "GPS live", pos: "right-[-1.5rem] top-10", delay: "0.6s" },
-  { icon: ShieldCheck, label: "Insured ₹10L", pos: "right-[-2rem] bottom-40", delay: "1.8s" },
+  { icon: ShieldCheck, label: "Damage-free", pos: "right-[-2rem] bottom-40", delay: "1.8s" },
   { icon: Package, label: "5-layer packing", pos: "right-6 bottom-[-1.75rem]", delay: "2.4s" },
 ];
 
@@ -147,29 +147,15 @@ export function Hero() {
             </div>
 
             {/* running truck */}
-            <div className="relative mt-6 h-20 overflow-hidden rounded-xl bg-surface">
-              <div className="absolute bottom-5 left-0 right-0 h-px bg-border" />
-              <motion.div
-                className="absolute bottom-6"
-                initial={{ x: "-20%" }}
-                animate={{ x: "115%" }}
-                transition={{ duration: 5.5, repeat: Infinity, ease: "linear" }}
-              >
-                <motion.span
-                  className="flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-xs font-bold text-primary-foreground"
-                  animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 0.45, repeat: Infinity }}
-                >
-                  <Truck className="size-5" /> Delivering
-                </motion.span>
-              </motion.div>
+            <div className="mt-6">
+              <TruckRun label="Delivering across India" />
             </div>
 
             <ul className="mt-5 grid gap-2.5">
               {[
                 { icon: Package, text: "Instant price calculator inside the app" },
                 { icon: Navigation, text: "Live tracking from pickup to delivery" },
-                { icon: ShieldCheck, text: "Insured moves up to ₹10 lakh" },
+                { icon: ShieldCheck, text: "Trained crews and 5-layer packing" },
               ].map((r) => (
                 <li key={r.text} className="flex items-center gap-3 text-sm text-foreground">
                   <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-accent text-primary">
