@@ -61,50 +61,42 @@ export function Contact() {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+        <div className="mt-6 grid gap-5 lg:grid-cols-2">
           <Reveal>
-            <div className="overflow-hidden rounded-2xl border border-border shadow-soft">
-              <iframe
-                title="GrowwIndia head office location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.6797%2C12.9414%2C77.7317%2C12.9714&layer=mapnik"
-                className="h-[320px] w-full border-0"
-                loading="lazy"
-              />
+            <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-6">
+              <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
+                <MapPin className="size-4 text-secondary" /> Head office
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{CONTACT.office}</p>
+              <p className="mt-auto text-sm text-muted-foreground">
+                Walk-ins welcome — ask for the relocation desk on the 3rd floor.
+              </p>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="flex h-full flex-col gap-6 rounded-2xl border border-border bg-surface p-6">
-              <div>
-                <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
-                  <MapPin className="size-4 text-secondary" /> Head office
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {CONTACT.office}
-                </p>
-              </div>
-              <div>
-                <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
-                  <Clock className="size-4 text-secondary" /> Business hours
-                </h3>
-                <ul className="mt-2 grid gap-1.5 text-sm text-muted-foreground">
-                  <li className="flex justify-between">
-                    <span>Mon – Fri</span> <span className="font-medium">7:00 – 23:00</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday</span> <span className="font-medium">7:00 – 22:00</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sunday</span> <span className="font-medium">8:00 – 20:00</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Support line</span>{" "}
-                    <span className="font-medium text-success">24 × 7</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-6">
+              <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
+                <Clock className="size-4 text-secondary" /> Business hours
+              </h3>
+              <ul className="grid gap-1.5 text-sm text-muted-foreground">
+                <li className="flex justify-between">
+                  <span>Mon – Fri</span> <span className="font-medium">7:00 – 23:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Saturday</span> <span className="font-medium">7:00 – 22:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Sunday</span> <span className="font-medium">8:00 – 20:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Support line</span>{" "}
+                  <span className="font-medium text-success">24 × 7</span>
+                </li>
+              </ul>
             </div>
           </Reveal>
         </div>
+
       </div>
     </section>
   );
