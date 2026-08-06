@@ -15,7 +15,7 @@ export function Contact() {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      lines: ["Instant quotes & tracking", "Average reply in 2 minutes"],
+      lines: ["Instant quotes & move updates", "Average reply in 2 minutes"],
       href: CONTACT.whatsapp,
       cta: "Start chat",
     },
@@ -34,7 +34,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Talk to a move manager, not a call centre"
-          body="Reach us however you like — the same team handles quotes, tracking and claims."
+          body="Reach us however you like — the same team handles quotes, move updates and claims."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">

@@ -66,7 +66,7 @@ export function Hero() {
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
             Trusted relocation partner with instant app pricing, verified movers, live
-            tracking, secure packing and fully transparent pricing.
+            tracking (coming soon), secure packing and fully transparent pricing.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
