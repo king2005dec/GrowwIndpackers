@@ -50,7 +50,7 @@ export function Header() {
                 scrolled ? "text-foreground" : "text-primary-foreground",
               )}
             >
-              Swift<span className="text-secondary">Move</span>
+              Groww<span className="text-secondary">India</span>
             </span>
             <span
               className={cn(

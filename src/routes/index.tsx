@@ -20,7 +20,7 @@ import { CONTACT, FAQS } from "@/lib/site-data";
 
 const TITLE = "GrowwIndia | Packers & Movers in India — Book Your Move";
 const DESCRIPTION =
-  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, careful packing, live GPS tracking and no hidden charges. Get a free estimate in 60 seconds.";
+  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, careful packing, tracking updates and no hidden charges. Get a free estimate in 60 seconds.";
 
 const schema = {
   "@context": "https://schema.org",

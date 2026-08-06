@@ -19,7 +19,7 @@ import { TruckRun } from "./TruckRun";
 
 const PILLS = [
   "100% Verified",
-  "Live Tracking",
+  "Tracking Coming Soon",
   "Same Day Moving",
   "No Hidden Charges",
 ];
@@ -27,7 +27,7 @@ const PILLS = [
 const FLOATERS = [
   { icon: BadgeCheck, label: "Verified crew", pos: "left-[-2.5rem] top-24", delay: "0s" },
   { icon: Truck, label: "Fleet ready", pos: "left-[-1.5rem] bottom-28", delay: "1.2s" },
-  { icon: Navigation, label: "GPS live", pos: "right-[-1.5rem] top-10", delay: "0.6s" },
+  { icon: Navigation, label: "Tracking soon", pos: "right-[-1.5rem] top-10", delay: "0.6s" },
   { icon: ShieldCheck, label: "Damage-free", pos: "right-[-2rem] bottom-40", delay: "1.8s" },
   { icon: Package, label: "5-layer packing", pos: "right-6 bottom-[-1.75rem]", delay: "2.4s" },
 ];
@@ -154,7 +154,7 @@ export function Hero() {
             <ul className="mt-5 grid gap-2.5">
               {[
                 { icon: Package, text: "Instant price calculator inside the app" },
-                { icon: Navigation, text: "Live tracking from pickup to delivery" },
+                { icon: Navigation, text: "Live tracking coming soon in the app" },
                 { icon: ShieldCheck, text: "Trained crews and 5-layer packing" },
               ].map((r) => (
                 <li key={r.text} className="flex items-center gap-3 text-sm text-foreground">
