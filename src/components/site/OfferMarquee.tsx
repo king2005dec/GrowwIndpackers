@@ -36,7 +36,7 @@ export const OfferMarquee = memo(function OfferMarquee() {
       <p className="sr-only">First order — get 20% off your GrowwIndia booking.</p>
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-primary-deep to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-primary-deep to-transparent" />
-      <div className="flex w-max animate-marquee will-change-transform">
+      <div className="flex w-max animate-marquee will-change-transform" style={{ animationDuration: "26s" }}>
         <Row />
         <Row />
       </div>
