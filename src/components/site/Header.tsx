@@ -24,7 +24,7 @@ export function Header() {
       )}
     >
       <div className="section-shell flex items-center justify-between gap-4">
-        <a href="#home" className="flex items-center gap-2.5" aria-label="SwiftMove home">
+        <a href="#home" className="flex items-center gap-2.5" aria-label="GrowwIndia home">
           <span className="grid size-10 place-items-center rounded-lg bg-primary text-primary-foreground shadow-soft">
             <svg viewBox="0 0 24 24" className="size-6" fill="none" aria-hidden="true">
               <path

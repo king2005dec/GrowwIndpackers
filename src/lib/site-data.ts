@@ -2,8 +2,8 @@ export const CONTACT = {
   phone: "+91 98765 43210",
   phoneHref: "tel:+919876543210",
   whatsapp:
-    "https://wa.me/919876543210?text=Hi%20SwiftMove%2C%20I%20need%20a%20moving%20quote.",
-  email: "hello@swiftmove.in",
+    "https://wa.me/919876543210?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
+  email: "hello@growwindia.in",
   office: "3rd Floor, Prestige Tech Park, Marathahalli, Bengaluru 560103",
 };
 

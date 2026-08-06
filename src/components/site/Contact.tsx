@@ -65,7 +65,7 @@ export function Contact() {
           <Reveal>
             <div className="overflow-hidden rounded-2xl border border-border shadow-soft">
               <iframe
-                title="SwiftMove head office location"
+                title="GrowwIndia head office location"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=77.6797%2C12.9414%2C77.7317%2C12.9714&layer=mapnik"
                 className="h-[320px] w-full border-0"
                 loading="lazy"

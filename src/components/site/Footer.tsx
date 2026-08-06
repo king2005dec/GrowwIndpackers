@@ -61,7 +61,7 @@ export function Footer() {
                 <a
                   key={i}
                   href="#home"
-                  aria-label="SwiftMove social profile"
+                  aria-label="GrowwIndia social profile"
                   className="grid size-9 place-items-center rounded-lg bg-white/8 text-primary-foreground/80 transition-colors hover:bg-secondary hover:text-secondary-foreground"
                 >
                   <I className="size-4" />
@@ -144,7 +144,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="section-shell flex flex-col items-center justify-between gap-3 py-6 pb-24 text-xs text-primary-foreground/60 sm:flex-row md:pb-6">
-          <p>© {new Date().getFullYear()} SwiftMove Logistics Pvt. Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} GrowwIndia Logistics Pvt. Ltd. All rights reserved.</p>
           <ul className="flex gap-5">
             {["Privacy Policy", "Terms of Service", "Refund Policy"].map((l) => (
               <li key={l}>
