@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Apple, Calculator, Package, ShieldCheck, Smartphone, Truck } from "lucide-react";
+import { ArrowRight, Apple, Calculator, Package, ShieldCheck, Smartphone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
+import { TruckRun } from "./TruckRun";
 
 const POINTS = [
   { icon: Calculator, title: "Instant price in the app", body: "Enter your route and home size — the app shows the full price breakup." },
@@ -22,27 +22,8 @@ export function DownloadApp() {
         <Reveal className="mt-12">
           <div className="overflow-hidden rounded-2xl bg-primary text-primary-foreground shadow-card">
             {/* running truck strip */}
-            <div className="relative h-24 overflow-hidden border-b border-white/10 bg-white/[0.06]">
-              <div className="absolute bottom-6 left-0 right-0 h-px bg-white/25" />
-              <div className="absolute bottom-[1.35rem] left-0 right-0 flex gap-6 px-2">
-                {Array.from({ length: 40 }).map((_, i) => (
-                  <span key={i} className="h-0.5 w-6 shrink-0 rounded-full bg-white/20" />
-                ))}
-              </div>
-              <motion.div
-                className="absolute bottom-7"
-                initial={{ x: "-15%" }}
-                animate={{ x: "110%" }}
-                transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
-              >
-                <motion.span
-                  className="flex items-center gap-2 rounded-lg bg-secondary px-3 py-2 text-xs font-bold text-secondary-foreground shadow-glow"
-                  animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity }}
-                >
-                  <Truck className="size-5" /> On the move
-                </motion.span>
-              </motion.div>
+            <div className="p-4 sm:p-5">
+              <TruckRun label="On the move" />
             </div>
 
             <div className="grid gap-8 p-6 sm:p-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -89,14 +70,9 @@ export function DownloadApp() {
                 >
                   <Smartphone className="size-4" /> Get it on Google Play
                 </a>
-                <a
-                  href="https://apps.apple.com/search?term=GrowwIndia%20Packers%20Movers"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-glass btn-block"
-                >
-                  <Apple className="size-4" /> Download on the App Store
-                </a>
+                <div className="btn btn-glass btn-block cursor-default opacity-80">
+                  <Apple className="size-4" /> App Store — coming soon
+                </div>
                 <a
                   href="#booking"
                   className="btn btn-glass btn-block"

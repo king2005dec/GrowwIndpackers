@@ -20,7 +20,7 @@ export function PromoBanner() {
                 </h2>
                 <p className="mt-4 max-w-md text-base text-primary-foreground/75">
                   New customers save a flat 20% on their first SwiftMove booking — packing
-                  material, insurance and unpacking still included.
+                  material and unpacking still included.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a

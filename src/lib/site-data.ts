@@ -37,8 +37,8 @@ export const WHY_US = [
   },
   {
     icon: "BadgeCheck",
-    title: "Transit insurance",
-    body: "Goods insured up to ₹10 lakh with zero-paperwork claims handled by us.",
+    title: "Damage-free handling",
+    body: "Trained loaders, padded blankets and crated fragiles — handled right the first time.",
   },
   {
     icon: "MapPin",
@@ -62,7 +62,7 @@ export const CHECKLIST = [
   "Transparent, locked-in pricing",
   "Dedicated move manager",
   "Premium packing materials",
-  "Full transit insurance",
+  "Trained loading crew",
   "Same-day support & claims",
 ];
 
@@ -71,7 +71,6 @@ export const SERVICES = [
   { icon: "Building2", title: "Office relocation", body: "Weekend IT and workstation moves with zero downtime." },
   { icon: "Bike", title: "Bike transport", body: "Wooden-crated two-wheeler transport with GPS updates." },
   { icon: "Car", title: "Car transport", body: "Single and multi-car carriers across 400+ routes." },
-  { icon: "PawPrint", title: "Pet relocation", body: "IATA crates, vet clearance and travel documentation." },
   { icon: "Warehouse", title: "Warehousing", body: "Racked, pest-controlled warehouse space by the day." },
   { icon: "Boxes", title: "Storage", body: "Short and long-term climate-controlled storage units." },
   { icon: "Plane", title: "International moving", body: "Sea and air freight with customs documentation." },
@@ -112,7 +111,7 @@ export const REVIEWS = [
     name: "Priya Nair",
     city: "Kochi → Bengaluru",
     stars: 5,
-    text: "Moved with two cats. The team handled the pet crates calmly and coordinated with my vet's paperwork.",
+    text: "Everything arrived exactly as it left — glassware, TV, wardrobe. The crew was polite and quick.",
   },
   {
     name: "Aditya Rao",
@@ -124,7 +123,7 @@ export const REVIEWS = [
     name: "Farhan Qureshi",
     city: "Kolkata (local)",
     stars: 5,
-    text: "Booked at 9pm for a next-morning move. Confirmed within ten minutes with an insurance certificate on WhatsApp.",
+    text: "Booked at 9pm for a next-morning move. Confirmed within ten minutes with a written booking summary on WhatsApp.",
   },
   {
     name: "Meera Joshi",
@@ -153,7 +152,7 @@ export const LOVE_US = [
   { icon: "Navigation", label: "Live tracking" },
   { icon: "ShieldCheck", label: "Secure packing" },
   { icon: "Zap", label: "Instant booking" },
-  { icon: "FileCheck2", label: "Insurance" },
+  { icon: "FileCheck2", label: "Careful handling" },
   { icon: "Users", label: "Professional team" },
   { icon: "IdCard", label: "Verified drivers" },
 ];
@@ -161,7 +160,7 @@ export const LOVE_US = [
 export const PROCESS = [
   { step: "01", title: "Book in 60 seconds", body: "Share your route and home size in the app and get an instant estimate." },
   { step: "02", title: "Expert packing", body: "Crew arrives with materials and barcodes every carton." },
-  { step: "03", title: "Tracked transport", body: "GPS-tracked, insured vehicles with checkpoint updates." },
+  { step: "03", title: "Tracked transport", body: "GPS-tracked vehicles with checkpoint updates." },
   { step: "04", title: "Delivery & setup", body: "Unpacking, furniture assembly and debris removal included." },
 ];
 
@@ -177,10 +176,6 @@ export const FAQS = [
   {
     q: "Is the price I see final?",
     a: "Yes. The estimate is locked at booking. The only changes possible are if the inventory or address you shared changes materially, and we always confirm in writing first.",
-  },
-  {
-    q: "Are my goods insured during transit?",
-    a: "Every move includes basic transit cover. You can upgrade to comprehensive all-risk insurance up to ₹10 lakh for 1.5% of the declared value.",
   },
   {
     q: "How long does an intercity move take?",
@@ -204,7 +199,7 @@ export const FAQS = [
   },
   {
     q: "Do you move bikes and cars?",
-    a: "Yes. Two-wheelers travel in wooden crates and cars go on enclosed or open carriers, with separate insurance for the vehicle.",
+    a: "Yes. Two-wheelers travel in wooden crates and cars go on enclosed or open carriers, handled by dedicated vehicle-transport crews.",
   },
   {
     q: "Which payment methods do you accept?",

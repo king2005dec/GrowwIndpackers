@@ -15,7 +15,7 @@ export function Faq() {
         <SectionHeading
           eyebrow="FAQ"
           title="Questions people ask before booking"
-          body="Everything about pricing, insurance, timelines and claims — answered plainly."
+          body="Everything about pricing, timelines, packing and claims — answered plainly."
         />
         <Reveal className="mt-12">
           <Accordion
