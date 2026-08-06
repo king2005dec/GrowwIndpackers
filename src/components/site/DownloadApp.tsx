@@ -1,4 +1,4 @@
-import { ArrowRight, Apple, Calculator, Package, ShieldCheck, Smartphone, Truck } from "lucide-react";
+import { ArrowRight, Apple, Calculator, Package, ShieldCheck, Smartphone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { TruckRun } from "./TruckRun";
