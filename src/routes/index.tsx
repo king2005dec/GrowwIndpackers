@@ -17,36 +17,62 @@ import { Faq } from "@/components/site/Faq";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
-import { CONTACT, FAQS } from "@/lib/site-data";
+import { CONTACT, FAQS, SERVICES, SLOGAN } from "@/lib/site-data";
 
-const TITLE = "GrowwIndia | Packers & Movers in India — Book Your Move";
+const SITE_URL = "https://ai-move-pro.lovable.app";
+const TITLE = "Packers & Movers Mumbai | GrowwIndia Home Shifting";
 const DESCRIPTION =
-  "Book verified packers & movers across 120+ Indian cities. Instant app pricing, careful packing, tracking updates and no hidden charges. Get a free estimate in 60 seconds.";
+  "GrowwIndia Packers and Movers, Mumbai — house relocation, office shifting, bike transport, car carrier, warehouse storage and labour help. Call +91 98196 97667 for a free quote.";
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "MovingCompany",
-      name: "GrowwIndia Logistics",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Groww India Packers and Movers",
+      slogan: SLOGAN,
+      url: SITE_URL,
       description: DESCRIPTION,
-      telephone: "+91-98765-43210",
+      telephone: CONTACT.phone,
       email: CONTACT.email,
       priceRange: "₹₹",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "3rd Floor, Prestige Tech Park, Marathahalli",
-        addressLocality: "Bengaluru",
-        addressRegion: "Karnataka",
-        postalCode: "560103",
-        addressCountry: "IN",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "6400",
-      },
+      address: [
+        {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400067",
+          addressCountry: "IN",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Shop 03, Shiv Building, Swami Vivekanand Rd, Parsi Colony, Andheri West",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400058",
+          addressCountry: "IN",
+        },
+      ],
       areaServed: ["Mumbai", "Delhi NCR", "Bengaluru", "Hyderabad", "Chennai", "Pune"],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Moving services",
+        itemListElement: SERVICES.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s.title, description: s.body },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "GrowwIndia Packers and Movers",
+      publisher: { "@id": `${SITE_URL}/#organization` },
     },
     {
       "@type": "FAQPage",
@@ -64,15 +90,25 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "GrowwIndia Packers and Movers" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
-      { name: "keywords", content: "packers and movers, house shifting, bike transport, office relocation India" },
+      {
+        name: "keywords",
+        content:
+          "packers and movers Mumbai, house shifting, office shifting, bike transport, car carrier, warehouse storage, labour helpers",
+      },
+      { name: "geo.region", content: "IN-MH" },
+      { name: "geo.placename", content: "Mumbai" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(schema) },
     ],
