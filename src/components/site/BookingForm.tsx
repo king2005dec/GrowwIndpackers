@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 
 import { CITY_OPTIONS, HOUSE_SIZES } from "@/lib/site-data";
+import { sendBookingEmail } from "@/lib/booking.functions";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { TruckRun } from "./TruckRun";
