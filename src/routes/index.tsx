@@ -17,7 +17,7 @@ import { Faq } from "@/components/site/Faq";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
-import { CONTACT, FAQS } from "@/lib/site-data";
+import { CONTACT, FAQS, SERVICES, SLOGAN } from "@/lib/site-data";
 
 const SITE_URL = "https://ai-move-pro.lovable.app";
 const TITLE = "Packers & Movers Mumbai | GrowwIndia Home Shifting";
