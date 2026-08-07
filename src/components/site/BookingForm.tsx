@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 
 import { CITY_OPTIONS, HOUSE_SIZES } from "@/lib/site-data";
+import { sendBookingEmail } from "@/lib/booking.functions";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { TruckRun } from "./TruckRun";
@@ -36,12 +37,18 @@ export function BookingForm() {
   });
 
   const onSubmit = async (values: FormValues) => {
-    await new Promise((r) => setTimeout(r, 1100));
-    toast.success("Booking request received", {
-      description: `Thanks ${values.name.split(" ")[0]} — a move manager will call you within 10 minutes.`,
-    });
-    setSent(true);
-    reset();
+    try {
+      await sendBookingEmail({ data: values });
+      toast.success("Booking request received", {
+        description: `Thanks ${values.name.split(" ")[0]} — a move manager will call you within 10 minutes.`,
+      });
+      setSent(true);
+      reset();
+    } catch {
+      toast.error("Could not send your request", {
+        description: "Please call or WhatsApp us on +91 98196 97667 and we'll book it for you.",
+      });
+    }
   };
 
   const field =

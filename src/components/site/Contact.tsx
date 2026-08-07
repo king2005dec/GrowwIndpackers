@@ -1,5 +1,5 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { CONTACT } from "@/lib/site-data";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { CONTACT, SLOGAN } from "@/lib/site-data";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -61,41 +61,30 @@ export function Contact() {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-2">
+        <div className="mt-6">
           <Reveal>
-            <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-6">
+            <div className="rounded-2xl border border-border bg-surface p-6">
               <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
                 <MapPin className="size-4 text-secondary" /> Head office
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{CONTACT.office}</p>
-              <p className="mt-auto text-sm text-muted-foreground">
-                Walk-ins welcome — ask for the relocation desk on the 3rd floor.
+              <p className="mt-2 text-sm font-semibold text-foreground">{CONTACT.officeName}</p>
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-secondary">
+                {SLOGAN}
               </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-6">
-              <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
-                <Clock className="size-4 text-secondary" /> Business hours
-              </h3>
-              <ul className="grid gap-1.5 text-sm text-muted-foreground">
-                <li className="flex justify-between">
-                  <span>Mon – Fri</span> <span className="font-medium">7:00 – 23:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Saturday</span> <span className="font-medium">7:00 – 22:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Sunday</span> <span className="font-medium">8:00 – 20:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Support line</span>{" "}
-                  <span className="font-medium text-success">24 × 7</span>
-                </li>
+              <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+                {CONTACT.offices.map((addr, i) => (
+                  <li key={addr} className="rounded-xl border border-border bg-card p-4">
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      Branch {i + 1}
+                    </span>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{addr}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </Reveal>
         </div>
+
 
       </div>
     </section>

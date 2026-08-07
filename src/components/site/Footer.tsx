@@ -1,11 +1,27 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Youtube } from "lucide-react";
-import { CITIES, CONTACT, SERVICES } from "@/lib/site-data";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Twitter,
+  Youtube,
+} from "lucide-react";
+import { CITIES, CONTACT, SERVICES, SLOGAN } from "@/lib/site-data";
 
-const QUICK = ["Home", "About us", "Services", "Download App", "Reviews", "Contact"];
-const COMPANY = ["Our story", "Careers", "Partner with us", "Press kit", "Blog"];
-const SUPPORT = ["Track my move", "Raise a claim", "Reschedule move", "Payment help", "Help centre"];
+const QUICK = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Download App", href: "#pricing" },
+  { label: "Cities", href: "#cities" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Book a move", href: "#booking" },
+  { label: "Contact", href: "#contact" },
+];
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -13,7 +29,7 @@ export function Footer() {
   return (
     <footer className="bg-primary-deep text-primary-foreground">
       <div className="section-shell py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_repeat(4,0.85fr)]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.2fr]">
           <div>
             <div className="flex items-center gap-2.5">
               <span className="grid size-10 place-items-center rounded-lg bg-secondary text-secondary-foreground">
@@ -34,13 +50,18 @@ export function Footer() {
                   <circle cx="17" cy="18" r="1.7" stroke="currentColor" strokeWidth="1.8" />
                 </svg>
               </span>
-              <span className="text-lg font-extrabold">
-                Swift<span className="text-secondary">Move</span>
+              <span className="leading-tight">
+                <span className="block text-lg font-extrabold">
+                  Groww<span className="text-secondary">India</span>
+                </span>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+                  {SLOGAN}
+                </span>
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/65">
-              India&apos;s trusted packers &amp; movers network. Verified crews, careful
-              shipments and pricing locked at booking — in 120+ cities.
+              Groww India Packers and Movers — verified crews, careful shipments and pricing
+              locked at booking, across Mumbai and 120+ cities.
             </p>
             <div className="mt-5 grid gap-2 text-sm">
               <a
@@ -50,10 +71,18 @@ export function Footer() {
                 <Phone className="size-4" /> {CONTACT.phone}
               </a>
               <a
-                href={`mailto:${CONTACT.email}`}
+                href={CONTACT.whatsapp}
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-secondary"
               >
-                <Mail className="size-4" /> {CONTACT.email}
+                <MessageCircle className="size-4" /> WhatsApp us
+              </a>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-2 break-all text-primary-foreground/80 hover:text-secondary"
+              >
+                <Mail className="size-4 shrink-0" /> {CONTACT.email}
               </a>
             </div>
             <div className="mt-5 flex gap-2">
@@ -70,49 +99,58 @@ export function Footer() {
             </div>
           </div>
 
-          {[
-            { title: "Quick links", items: QUICK },
-            { title: "Services", items: SERVICES.slice(0, 6).map((s) => s.title) },
-            { title: "Cities", items: CITIES.slice(0, 6).map((c) => c.name) },
-            { title: "Company", items: COMPANY },
-          ].map((col) => (
-            <div key={col.title}>
-              <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground">
-                {col.title}
-              </h3>
-              <ul className="mt-4 grid gap-2.5 text-sm">
-                {col.items.map((it) => (
-                  <li key={it}>
-                    <a
-                      href="#home"
-                      className="text-primary-foreground/65 transition-colors hover:text-secondary"
-                    >
-                      {it}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 grid gap-6 border-t border-white/10 pt-10 lg:grid-cols-[1fr_1fr]">
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-[0.14em]">Support</h3>
-            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              {SUPPORT.map((s) => (
-                <li key={s}>
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em]">Quick links</h3>
+            <ul className="mt-4 grid gap-2.5 text-sm">
+              {QUICK.map((q) => (
+                <li key={q.label}>
                   <a
-                    href="#contact"
+                    href={q.href}
                     className="text-primary-foreground/65 transition-colors hover:text-secondary"
                   >
-                    {s}
+                    {q.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em]">Services</h3>
+            <ul className="mt-4 grid gap-2.5 text-sm">
+              {SERVICES.map((s) => (
+                <li key={s.title}>
+                  <a
+                    href="#services"
+                    className="text-primary-foreground/65 transition-colors hover:text-secondary"
+                  >
+                    {s.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em]">Head office</h3>
+            <p className="mt-4 text-sm font-semibold">{CONTACT.officeName}</p>
+            <ul className="mt-3 grid gap-3 text-sm text-primary-foreground/65">
+              {CONTACT.offices.map((addr) => (
+                <li key={addr} className="flex gap-2">
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-secondary" />
+                  <span className="leading-relaxed">{addr}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs uppercase tracking-[0.14em] text-primary-foreground/50">
+              Serving {CITIES.length}+ major cities
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-white/10 pt-10">
           <form
+            className="mx-auto max-w-xl text-center"
             onSubmit={(e) => {
               e.preventDefault();
               toast.success("Subscribed", {
@@ -122,6 +160,9 @@ export function Footer() {
             }}
           >
             <h3 className="text-sm font-bold uppercase tracking-[0.14em]">Newsletter</h3>
+            <p className="mt-2 text-sm text-primary-foreground/65">
+              Moving tips and app-only offers, once a month.
+            </p>
             <div className="mt-4 flex gap-2">
               <input
                 type="email"
@@ -131,10 +172,7 @@ export function Footer() {
                 placeholder="you@email.com"
                 className="w-full rounded-lg border border-white/15 bg-white/8 px-3.5 py-2.5 text-sm text-primary-foreground outline-none placeholder:text-primary-foreground/45 focus:border-secondary"
               />
-              <button
-                type="submit"
-                className="btn btn-secondary btn-sm"
-              >
+              <button type="submit" className="btn btn-secondary btn-sm">
                 Subscribe
               </button>
             </div>
@@ -144,7 +182,9 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="section-shell flex flex-col items-center justify-between gap-3 py-6 pb-24 text-xs text-primary-foreground/60 sm:flex-row md:pb-6">
-          <p>© {new Date().getFullYear()} GrowwIndia Logistics Pvt. Ltd. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Groww India Packers and Movers. All rights reserved.
+          </p>
           <ul className="flex gap-5">
             {["Privacy Policy", "Terms of Service", "Refund Policy"].map((l) => (
               <li key={l}>

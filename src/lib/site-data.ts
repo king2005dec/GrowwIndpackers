@@ -1,10 +1,16 @@
+export const SLOGAN = "Help Ever Hurt Never";
+
 export const CONTACT = {
-  phone: "+91 98765 43210",
-  phoneHref: "tel:+919876543210",
+  phone: "+91 98196 97667",
+  phoneHref: "tel:+919819697667",
   whatsapp:
-    "https://wa.me/919876543210?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
-  email: "hello@growwindia.in",
-  office: "3rd Floor, Prestige Tech Park, Marathahalli, Bengaluru 560103",
+    "https://wa.me/919819697667?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
+  email: "growwindpackes7667@gmail.com",
+  officeName: "Groww India Packers and Movers",
+  offices: [
+    "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West, Mumbai 400067",
+    "Shop 03, Shiv Building, Yadavji Sandwich, Swami Vivekanand Rd, Parsi Colony, Andheri West, Mumbai, Maharashtra 400058",
+  ],
 };
 
 export const NAV_LINKS = [
@@ -67,19 +73,16 @@ export const CHECKLIST = [
 ];
 
 export const SERVICES = [
-  { icon: "Home", title: "House shifting", body: "1RK to 5BHK villas moved door-to-door with full packing." },
-  { icon: "Building2", title: "Office relocation", body: "Weekend IT and workstation moves with zero downtime." },
+  { icon: "Home", title: "House relocation", body: "1RK to 5BHK villas moved door-to-door with full packing." },
+  { icon: "Building2", title: "Office shifting", body: "Weekend IT and workstation moves with zero downtime." },
   { icon: "Bike", title: "Bike transport", body: "Wooden-crated two-wheeler transport with checkpoint updates." },
-  { icon: "Car", title: "Car transport", body: "Single and multi-car carriers across 400+ routes." },
-  { icon: "Warehouse", title: "Warehousing", body: "Racked, pest-controlled warehouse space by the day." },
-  { icon: "Boxes", title: "Storage", body: "Short and long-term climate-controlled storage units." },
-  { icon: "Plane", title: "International moving", body: "Sea and air freight with customs documentation." },
-  { icon: "Package", title: "Packing service", body: "Room-by-room packing with barcode inventory labels." },
-  { icon: "PackageOpen", title: "Unpacking & setup", body: "Unpack, arrange and haul away all packing waste." },
-  { icon: "Wrench", title: "Furniture assembly", body: "Dismantle and reassemble beds, wardrobes and modular units." },
-  { icon: "Truck", title: "Local moving", body: "Hourly mini-truck and tempo moves within the city." },
-  { icon: "Route", title: "Intercity moving", body: "Dedicated and shared-load moves between 120+ cities." },
-  { icon: "Briefcase", title: "Corporate moving", body: "Employee relocation programs with monthly invoicing." },
+  { icon: "Car", title: "Car carrier", body: "Single and multi-car carriers across 400+ routes." },
+  { icon: "Zap", title: "Local express", body: "Same-day city moves with fast crews and quick turnaround." },
+  { icon: "Truck", title: "Vehicle provide", body: "Tempo, mini-truck and container vehicles on demand." },
+  { icon: "Warehouse", title: "Warehouse storage", body: "Racked, pest-controlled storage from a day to a year." },
+  { icon: "Package", title: "Packing only", body: "Room-by-room professional packing with labelled cartons." },
+  { icon: "Users", title: "Labor helpers", body: "Trained loading and unloading manpower by the hour." },
+  { icon: "Route", title: "Intercity", body: "Dedicated and shared-load moves between 120+ cities." },
 ];
 
 export const REVIEWS = [
