@@ -1,10 +1,16 @@
+export const SLOGAN = "Help Ever Hurt Never";
+
 export const CONTACT = {
-  phone: "+91 98765 43210",
-  phoneHref: "tel:+919876543210",
+  phone: "+91 98196 97667",
+  phoneHref: "tel:+919819697667",
   whatsapp:
-    "https://wa.me/919876543210?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
-  email: "hello@growwindia.in",
-  office: "3rd Floor, Prestige Tech Park, Marathahalli, Bengaluru 560103",
+    "https://wa.me/919819697667?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
+  email: "growwindpackes7667@gmail.com",
+  officeName: "Groww India Packers and Movers",
+  offices: [
+    "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West, Mumbai 400067",
+    "Shop 03, Shiv Building, Yadavji Sandwich, Swami Vivekanand Rd, Parsi Colony, Andheri West, Mumbai, Maharashtra 400058",
+  ],
 };
 
 export const NAV_LINKS = [
