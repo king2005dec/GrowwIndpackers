@@ -1,5 +1,5 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { CONTACT } from "@/lib/site-data";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { CONTACT, SLOGAN } from "@/lib/site-data";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
