@@ -50,8 +50,10 @@ export const sendBookingEmail = createServerFn({ method: "POST" })
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "Groww India Bookings <onboarding@resend.dev>",
-        to: ["growwindpackes7667@gmail.com"],
+        // Until a domain is verified in Resend, sends must come from
+        // onboarding@resend.dev and go to the Resend account owner's address.
+        from: process.env["BOOKING_FROM_EMAIL"] || "Groww India Bookings <onboarding@resend.dev>",
+        to: [process.env["BOOKING_TO_EMAIL"] || "growwindpackers7667@gmail.com"],
         reply_to: data.email,
         subject: `New move booking — ${data.name} (${data.from} → ${data.to})`,
         html,

@@ -5,7 +5,7 @@ export const CONTACT = {
   phoneHref: "tel:+919819697667",
   whatsapp:
     "https://wa.me/919819697667?text=Hi%20GrowwIndia%2C%20I%20need%20a%20moving%20quote.",
-  email: "growwindpackes7667@gmail.com",
+  email: "growwindpackers7667@gmail.com",
   officeName: "Groww India Packers and Movers",
   offices: [
     "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West, Mumbai 400067",
