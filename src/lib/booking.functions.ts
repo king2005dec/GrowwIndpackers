@@ -51,7 +51,7 @@ export const sendBookingEmail = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "Groww India Bookings <onboarding@resend.dev>",
-        to: ["growwindpackes7667@gmail.com"],
+        to: ["growwindpackers7667@gmail.com"],
         reply_to: data.email,
         subject: `New move booking — ${data.name} (${data.from} → ${data.to})`,
         html,
