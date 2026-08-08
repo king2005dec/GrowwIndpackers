@@ -10,6 +10,7 @@ import { sendBookingEmail } from "@/lib/booking.functions";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { TruckRun } from "./TruckRun";
+import { BookingSuccess } from "./BookingSuccess";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
@@ -26,6 +27,7 @@ type FormValues = z.infer<typeof schema>;
 
 export function BookingForm() {
   const [sent, setSent] = useState(false);
+  const [celebrate, setCelebrate] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -37,12 +39,14 @@ export function BookingForm() {
   });
 
   const onSubmit = async (values: FormValues) => {
+    const firstName = values.name.split(" ")[0] ?? "";
     try {
       await sendBookingEmail({ data: values });
       toast.success("Booking request received", {
-        description: `Thanks ${values.name.split(" ")[0]} — a move manager will call you within 10 minutes.`,
+        description: `Thanks ${firstName} — a move manager will call you within 10 minutes.`,
       });
       setSent(true);
+      setCelebrate(firstName);
       reset();
     } catch {
       toast.error("Could not send your request", {
@@ -51,13 +55,18 @@ export function BookingForm() {
     }
   };
 
+
   const field =
     "mt-1.5 w-full rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-ring";
   const err = "mt-1.5 block text-xs font-medium text-destructive";
 
   return (
     <section id="booking" className="bg-surface py-20 sm:py-24">
+      {celebrate !== null && (
+        <BookingSuccess name={celebrate} onClose={() => setCelebrate(null)} />
+      )}
       <div className="section-shell">
+
         <SectionHeading
           eyebrow="Book your move"
           title="Reserve your slot in 60 seconds"

@@ -324,3 +324,199 @@
     animation: none !important;
   }
 }
+
+/* ---------------- Dark mode ---------------- */
+.dark {
+  --background: oklch(0.16 0.03 265);
+  --surface: oklch(0.2 0.035 265);
+  --foreground: oklch(0.96 0.008 265);
+  --card: oklch(0.21 0.036 265);
+  --card-foreground: oklch(0.96 0.008 265);
+  --popover: oklch(0.21 0.036 265);
+  --popover-foreground: oklch(0.96 0.008 265);
+  --primary: oklch(0.62 0.17 265);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-deep: oklch(0.2 0.09 267);
+  --primary-light: oklch(0.72 0.13 265);
+  --secondary: oklch(0.7 0.19 33.5);
+  --secondary-foreground: oklch(0.15 0.02 265);
+  --success: oklch(0.74 0.17 149);
+  --success-foreground: oklch(0.16 0.03 265);
+  --muted: oklch(0.24 0.03 265);
+  --muted-foreground: oklch(0.73 0.02 265);
+  --accent: oklch(0.27 0.05 265);
+  --accent-foreground: oklch(0.9 0.04 265);
+  --destructive: oklch(0.63 0.21 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.3 0.03 265);
+  --input: oklch(0.32 0.03 265);
+  --ring: oklch(0.62 0.17 265);
+
+  --shadow-soft: 0 2px 8px -2px oklch(0 0 0 / 0.5), 0 12px 32px -12px oklch(0 0 0 / 0.6);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.5), 0 18px 40px -20px oklch(0 0 0 / 0.7);
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+/* ---------------- Booking confirmed animation ---------------- */
+@keyframes booking-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes booking-pop {
+  0% {
+    transform: translate3d(0, 18px, 0) scale(0.94);
+    opacity: 0;
+  }
+  60% {
+    transform: translate3d(0, 0, 0) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tick-pop {
+  0% {
+    transform: scale(0.2) rotate(-25deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes tick-ring {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.723 0.18 149 / 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 22px oklch(0.723 0.18 149 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.723 0.18 149 / 0);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--cx, 20px), 260px, 0) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+.booking-fade {
+  animation: booking-fade 0.25s ease-out both;
+}
+
+.booking-pop {
+  animation: booking-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tick-pop {
+  animation: tick-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.tick-ring {
+  animation: tick-ring 2s ease-out 0.35s infinite;
+}
+
+.confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti-bit {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 11px;
+  border-radius: 2px;
+  will-change: transform, opacity;
+  animation: confetti-fall 1.9s ease-in forwards;
+}
+
+.confetti-0 { left: 8%;  --cx: 18px;  background: var(--secondary); animation-delay: 0.05s; }
+.confetti-1 { left: 20%; --cx: -14px; background: var(--success);   animation-delay: 0.18s; }
+.confetti-2 { left: 32%; --cx: 26px;  background: var(--primary);   animation-delay: 0.1s; }
+.confetti-3 { left: 44%; --cx: -22px; background: var(--secondary); animation-delay: 0.28s; }
+.confetti-4 { left: 58%; --cx: 12px;  background: var(--success);   animation-delay: 0.14s; }
+.confetti-5 { left: 72%; --cx: -18px; background: var(--primary);   animation-delay: 0.22s; }
+.confetti-6 { left: 86%; --cx: 22px;  background: var(--secondary); animation-delay: 0.08s; }
+
+/* ---------------- Mobile-friendly motion helpers ---------------- */
+@keyframes slide-down-fade {
+  from {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes tap-in {
+  from {
+    transform: translate3d(0, 10px, 0) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.anim-slide-down {
+  animation: slide-down-fade 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-tap-in {
+  animation: tap-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility press {
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-fade,
+  .booking-pop,
+  .tick-pop,
+  .tick-ring,
+  .confetti-bit,
+  .anim-slide-down,
+  .anim-tap-in {
+    animation: none !important;
+  }
+}
+
