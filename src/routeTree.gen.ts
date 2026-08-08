@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PackersAndMoversCityRouteImport } from './routes/packers-and-movers.$city'
+import { Route as ServicesServiceRouteImport } from './routes/services.$service'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const PackersAndMoversCityRoute = PackersAndMoversCityRouteImport.update({
   path: '/packers-and-movers/$city',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesServiceRoute = ServicesServiceRouteImport.update({
+  id: '/services/$service',
+  path: '/services/$service',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/packers-and-movers/$city'
+  fullPaths: '/' | '/packers-and-movers/$city' | '/services/$service'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/packers-and-movers/$city'
-  id: '__root__' | '/' | '/packers-and-movers/$city'
+  to: '/' | '/packers-and-movers/$city' | '/services/$service'
+  id: '__root__' | '/' | '/packers-and-movers/$city' | '/services/$service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PackersAndMoversCityRoute: typeof PackersAndMoversCityRoute
+  ServicesServiceRoute: typeof ServicesServiceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PackersAndMoversCityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/$service': {
+      id: '/services/$service'
+      path: '/services/$service'
+      fullPath: '/services/$service'
+      preLoaderRoute: typeof ServicesServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PackersAndMoversCityRoute: PackersAndMoversCityRoute,
+  ServicesServiceRoute: ServicesServiceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
