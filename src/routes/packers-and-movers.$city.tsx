@@ -7,7 +7,7 @@ import { FloatingActions } from "@/components/site/FloatingActions";
 import { Reveal } from "@/components/site/Reveal";
 import { Icon } from "@/components/site/Icon";
 import { TruckRun } from "@/components/site/TruckRun";
-import { CITY_PAGES, getCity } from "@/lib/city-data";
+import { CITY_PAGES, getCity, type CityPage as CityData } from "@/lib/city-data";
 import { serviceSlugByTitle } from "@/lib/service-data";
 import { CONTACT, SLOGAN } from "@/lib/site-data";
 
@@ -110,7 +110,7 @@ export const Route = createFileRoute("/packers-and-movers/$city")({
 });
 
 function CityPage() {
-  const { city } = Route.useLoaderData();
+  const { city } = Route.useLoaderData() as { city: CityData };
   const others = CITY_PAGES.filter((c) => c.slug !== city.slug).slice(0, 8);
 
   return (

@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PackersAndMoversCityRouteImport } from './routes/packers-and-movers.$city'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PackersAndMoversCityRoute = PackersAndMoversCityRouteImport.update({
+  id: '/packers-and-movers/$city',
+  path: '/packers-and-movers/$city',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/packers-and-movers/$city': typeof PackersAndMoversCityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/packers-and-movers/$city'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/packers-and-movers/$city'
+  id: '__root__' | '/' | '/packers-and-movers/$city'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PackersAndMoversCityRoute: typeof PackersAndMoversCityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +58,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/packers-and-movers/$city': {
+      id: '/packers-and-movers/$city'
+      path: '/packers-and-movers/$city'
+      fullPath: '/packers-and-movers/$city'
+      preLoaderRoute: typeof PackersAndMoversCityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PackersAndMoversCityRoute: PackersAndMoversCityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
