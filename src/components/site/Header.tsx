@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/site-data";
+import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -85,26 +86,26 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 xl:flex">
-          <a
-            href="#booking"
-            className="btn btn-secondary btn-sm"
-          >
+        <div className="flex items-center gap-2">
+          <ThemeToggle
+            className={cn(!scrolled && "border-white/25 bg-white/12 text-primary-foreground")}
+          />
+          <a href="#booking" className="btn btn-secondary btn-sm press hidden xl:inline-flex">
             Book Now
           </a>
-        </div>
 
-        <button
+          <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           className={cn(
-            "grid size-10 place-items-center rounded-lg transition-colors xl:hidden",
+            "press grid size-10 place-items-center rounded-lg transition-colors xl:hidden",
             scrolled ? "bg-accent text-primary" : "bg-white/12 text-primary-foreground",
           )}
         >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
       <div
@@ -115,14 +116,15 @@ export function Header() {
 
       {open && (
         <div className="section-shell xl:hidden">
-          <div className="mt-3 rounded-xl border border-border bg-card p-4 shadow-card">
+          <div className="anim-slide-down mt-3 rounded-xl border border-border bg-card p-4 shadow-card">
             <nav className="grid gap-1" aria-label="Mobile">
-              {NAV_LINKS.map((l) => (
+              {NAV_LINKS.map((l, i) => (
                 <a
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-accent hover:text-primary"
+                  style={{ animationDelay: `${i * 40}ms` }}
+                  className="anim-tap-in press rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-accent hover:text-primary"
                 >
                   {l.label}
                 </a>
@@ -132,7 +134,7 @@ export function Header() {
               <a
                 href="#booking"
                 onClick={() => setOpen(false)}
-                className="btn btn-secondary btn-sm btn-block"
+                className="btn btn-secondary btn-sm btn-block press"
               >
                 Book Now
               </a>
