@@ -62,7 +62,11 @@ export function BookingForm() {
 
   return (
     <section id="booking" className="bg-surface py-20 sm:py-24">
+      {celebrate !== null && (
+        <BookingSuccess name={celebrate} onClose={() => setCelebrate(null)} />
+      )}
       <div className="section-shell">
+
         <SectionHeading
           eyebrow="Book your move"
           title="Reserve your slot in 60 seconds"
