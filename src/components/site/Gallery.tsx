@@ -1,19 +1,27 @@
-import galleryPacking from "@/assets/gallery-packing.jpg";
-import galleryLoading from "@/assets/gallery-loading.jpg";
-import galleryFleet from "@/assets/gallery-fleet.jpg";
-import galleryOffice from "@/assets/gallery-office.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
-import promoFamily from "@/assets/promo-family.jpg";
+import realTruckRed from "@/assets/real-truck-red.jpg";
+import realTruckWhite from "@/assets/real-truck-white.jpg";
+import realHomePacking from "@/assets/real-home-packing.jpg";
+import realWarehouseStorage from "@/assets/real-warehouse-storage.jpg";
+import realBikePacking from "@/assets/real-bike-packing.jpg";
+import realBoxesStacked from "@/assets/real-boxes-stacked.jpg";
+import realScooterPacking from "@/assets/real-scooter-packing.jpg";
+import realDoorstepPacking from "@/assets/real-doorstep-packing.jpg";
+import realTableWrapping from "@/assets/real-table-wrapping.jpg";
+import realTruckLoadedInside from "@/assets/real-truck-loaded-inside.jpg";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 const SHOTS = [
-  { src: galleryPacking, alt: "Mover wrapping a sofa in stretch film", label: "Packing", tall: true },
-  { src: galleryLoading, alt: "Crew loading cartons into a moving truck", label: "Loading" },
-  { src: galleryFleet, alt: "Fleet of GrowwIndia trucks at the depot", label: "Trucks" },
-  { src: galleryOffice, alt: "Office relocation with crated equipment", label: "Office moves", tall: true },
-  { src: aboutTeam, alt: "Uniformed movers carrying labelled cartons", label: "Our crews" },
-  { src: promoFamily, alt: "Family settling into their new home", label: "Happy homes" },
+  { src: realTruckRed, alt: "GrowwIndia S.M.D container moving truck", label: "S.M.D Container Truck", tall: true },
+  { src: realHomePacking, alt: "Multi-layer stretch film household furniture packing", label: "Living Room Furniture Lamination" },
+  { src: realTruckLoadedInside, alt: "Inside container truck loaded with stretch wrapped furniture", label: "Container Truck Loaded Cargo" },
+  { src: realTruckWhite, alt: "Tata local shifting truck with covered tarpaulin", label: "Local Shifting Tata Truck", tall: true },
+  { src: realBikePacking, alt: "Two-wheeler motorcycle bubble & stretch film wrapping", label: "Motorcycle Bubble Wrapping" },
+  { src: realScooterPacking, alt: "Scooter & Activa bubble film lamination in logistics hub", label: "Scooter Lamination & Packing", tall: true },
+  { src: realBoxesStacked, alt: "Barcoded & labeled moving cartons stack", label: "Barcoded Moving Cartons Stack" },
+  { src: realTableWrapping, alt: "Dining table and furniture shrink wrap protection", label: "Dining Table & Furniture Wrapping" },
+  { src: realDoorstepPacking, alt: "Doorstep goods and heavy carton packing", label: "Doorstep Goods & Box Packing", tall: true },
+  { src: realWarehouseStorage, alt: "Logistics warehouse facility with stacked packed cargo", label: "Logistics Warehouse & Storage" },
 ];
 
 export function Gallery() {
@@ -33,6 +41,7 @@ export function Gallery() {
                   src={s.src}
                   alt={s.alt}
                   loading="lazy"
+                  decoding="async"
                   className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
                     s.tall ? "h-[420px]" : "h-[280px]"
                   }`}

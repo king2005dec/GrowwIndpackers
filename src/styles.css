@@ -2,8 +2,6 @@
 @source "../src";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 /*
  * GrowwIndia design system — premium packers & movers.
  * Primary #0B2D8B, Secondary #FF5A3D, Success #22C55E, radius 18px, Poppins.
@@ -324,43 +322,8 @@
     animation: none !important;
   }
 }
-
-/* ---------------- Dark mode ---------------- */
-.dark {
-  --background: oklch(0.16 0.03 265);
-  --surface: oklch(0.2 0.035 265);
-  --foreground: oklch(0.96 0.008 265);
-  --card: oklch(0.21 0.036 265);
-  --card-foreground: oklch(0.96 0.008 265);
-  --popover: oklch(0.21 0.036 265);
-  --popover-foreground: oklch(0.96 0.008 265);
-  --primary: oklch(0.62 0.17 265);
-  --primary-foreground: oklch(0.99 0 0);
-  --primary-deep: oklch(0.2 0.09 267);
-  --primary-light: oklch(0.72 0.13 265);
-  --secondary: oklch(0.7 0.19 33.5);
-  --secondary-foreground: oklch(0.15 0.02 265);
-  --success: oklch(0.74 0.17 149);
-  --success-foreground: oklch(0.16 0.03 265);
-  --muted: oklch(0.24 0.03 265);
-  --muted-foreground: oklch(0.73 0.02 265);
-  --accent: oklch(0.27 0.05 265);
-  --accent-foreground: oklch(0.9 0.04 265);
-  --destructive: oklch(0.63 0.21 25);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.3 0.03 265);
-  --input: oklch(0.32 0.03 265);
-  --ring: oklch(0.62 0.17 265);
-
-  --shadow-soft: 0 2px 8px -2px oklch(0 0 0 / 0.5), 0 12px 32px -12px oklch(0 0 0 / 0.6);
-  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.5), 0 18px 40px -20px oklch(0 0 0 / 0.7);
-}
-
 html {
   color-scheme: light;
-}
-html.dark {
-  color-scheme: dark;
 }
 
 /* ---------------- Booking confirmed animation ---------------- */

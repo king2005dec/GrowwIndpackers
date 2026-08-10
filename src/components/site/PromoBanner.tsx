@@ -46,6 +46,7 @@ export function PromoBanner() {
                 width={1200}
                 height={900}
                 loading="lazy"
+                decoding="async"
                 className="h-64 w-full rounded-2xl object-cover shadow-card lg:h-[360px] lg:rounded-l-2xl lg:rounded-r-none"
               />
             </div>

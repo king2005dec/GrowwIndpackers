@@ -1,19 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/site-data";
-import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 40;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+          if (progressRef.current) {
+            progressRef.current.style.transform = `scaleX(${ratio})`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -87,30 +98,28 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle
-            className={cn(!scrolled && "border-white/25 bg-white/12 text-primary-foreground")}
-          />
           <a href="#booking" className="btn btn-secondary btn-sm press hidden xl:inline-flex">
             Book Now
           </a>
 
           <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-          className={cn(
-            "press grid size-10 place-items-center rounded-lg transition-colors xl:hidden",
-            scrolled ? "bg-accent text-primary" : "bg-white/12 text-primary-foreground",
-          )}
-        >
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+            className={cn(
+              "press grid size-10 place-items-center rounded-lg transition-colors xl:hidden",
+              scrolled ? "bg-accent text-primary" : "bg-white/12 text-primary-foreground",
+            )}
+          >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </div>
 
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary transition-transform duration-150"
-        style={{ transform: `scaleX(${progress})` }}
+        ref={progressRef}
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary will-change-transform"
+        style={{ transform: "scaleX(0)" }}
         aria-hidden="true"
       />
 

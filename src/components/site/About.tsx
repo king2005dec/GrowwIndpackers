@@ -15,6 +15,7 @@ export function About() {
               width={1200}
               height={1400}
               loading="lazy"
+              decoding="async"
               className="h-[420px] w-full object-cover sm:h-[520px]"
             />
           </div>
