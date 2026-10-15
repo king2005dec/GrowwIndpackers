@@ -93,7 +93,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Verified packers and movers with instant app pricing across 120+ Indian cities.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/logo.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/logo.jpg" },
     ],
     links: [
       {
@@ -107,7 +109,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/logo-icon.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/logo-icon.jpg" },
     ],
   }),
 

@@ -42,24 +42,11 @@ export function Header() {
     >
       <div className="section-shell flex items-center justify-between gap-4">
         <a href="#home" className="flex items-center gap-2.5" aria-label="GrowwIndia home">
-          <span className="grid size-10 place-items-center rounded-lg bg-primary text-primary-foreground shadow-soft">
-            <svg viewBox="0 0 24 24" className="size-6" fill="none" aria-hidden="true">
-              <path
-                d="M3 8.5h9.5V17H5a2 2 0 0 1-2-2V8.5Z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12.5 11H17l3 3.2V17h-7.5V11Z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinejoin="round"
-              />
-              <circle cx="8" cy="18" r="1.7" stroke="currentColor" strokeWidth="1.8" />
-              <circle cx="17" cy="18" r="1.7" stroke="currentColor" strokeWidth="1.8" />
-            </svg>
-          </span>
+          <img
+            src="/logo-icon.jpg"
+            alt="GrowwIndia Packers & Movers"
+            className="size-10 sm:size-11 rounded-xl object-contain bg-white shadow-soft ring-1 ring-border/20 p-0.5"
+          />
           <span className="leading-none">
             <span
               className={cn(

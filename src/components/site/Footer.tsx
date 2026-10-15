@@ -31,33 +31,14 @@ export function Footer() {
       <div className="section-shell py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.2fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="grid size-10 place-items-center rounded-lg bg-secondary text-secondary-foreground">
-                <svg viewBox="0 0 24 24" className="size-6" fill="none" aria-hidden="true">
-                  <path
-                    d="M3 8.5h9.5V17H5a2 2 0 0 1-2-2V8.5Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M12.5 11H17l3 3.2V17h-7.5V11Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinejoin="round"
-                  />
-                  <circle cx="8" cy="18" r="1.7" stroke="currentColor" strokeWidth="1.8" />
-                  <circle cx="17" cy="18" r="1.7" stroke="currentColor" strokeWidth="1.8" />
-                </svg>
-              </span>
-              <span className="leading-tight">
-                <span className="block text-lg font-extrabold">
-                  Groww<span className="text-secondary">India</span>
-                </span>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
-                  {SLOGAN}
-                </span>
-              </span>
+            <div className="flex flex-col items-start gap-2">
+              <a href="#home" aria-label="GrowwIndia home" className="inline-block">
+                <img
+                  src="/logo.jpg"
+                  alt="Groww India Packers & Movers"
+                  className="h-16 w-auto rounded-xl bg-white p-1.5 shadow-card"
+                />
+              </a>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/65">
               Groww India Packers and Movers — verified crews, careful shipments and pricing

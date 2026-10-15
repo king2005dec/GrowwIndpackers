@@ -55,9 +55,11 @@ export function DownloadApp() {
               </div>
 
               <div className="flex flex-col justify-center gap-3 rounded-2xl border border-white/12 bg-white/[0.05] p-6">
-                <span className="grid size-12 place-items-center rounded-xl bg-secondary text-secondary-foreground">
-                  <Smartphone className="size-6" />
-                </span>
+                <img
+                  src="/logo-icon.jpg"
+                  alt="GrowwIndia App Icon"
+                  className="size-16 rounded-2xl object-contain bg-white shadow-soft p-1 ring-1 ring-white/20"
+                />
                 <p className="text-lg font-bold">GrowwIndia Packers &amp; Movers</p>
                 <p className="text-sm text-primary-foreground/70">
                   Free download · 4.8★ rated · 1M+ moves priced
