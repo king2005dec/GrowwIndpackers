@@ -1,23 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
+
+// ── Above-the-fold: load immediately ─────────────────────────────────────────
 import { Header } from "@/components/site/Header";
-import { OfferMarquee } from "@/components/site/OfferMarquee";
 import { Hero } from "@/components/site/Hero";
-import { WhyChooseUs } from "@/components/site/WhyChooseUs";
-import { About } from "@/components/site/About";
-import { Services } from "@/components/site/Services";
-import { DownloadApp } from "@/components/site/DownloadApp";
-import { Reviews } from "@/components/site/Reviews";
-import { Cities } from "@/components/site/Cities";
-import { LoveUs } from "@/components/site/LoveUs";
-import { PromoBanner } from "@/components/site/PromoBanner";
-import { BookingForm } from "@/components/site/BookingForm";
-import { Gallery } from "@/components/site/Gallery";
-import { Process } from "@/components/site/Process";
-import { Faq } from "@/components/site/Faq";
-import { Contact } from "@/components/site/Contact";
-import { Footer } from "@/components/site/Footer";
-import { FloatingActions } from "@/components/site/FloatingActions";
+import { OfferMarquee } from "@/components/site/OfferMarquee";
+
+// ── Below-the-fold: lazy-load so first paint is instant ──────────────────────
+const WhyChooseUs  = lazy(() => import("@/components/site/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const About        = lazy(() => import("@/components/site/About").then(m => ({ default: m.About })));
+const Services     = lazy(() => import("@/components/site/Services").then(m => ({ default: m.Services })));
+const DownloadApp  = lazy(() => import("@/components/site/DownloadApp").then(m => ({ default: m.DownloadApp })));
+const Reviews      = lazy(() => import("@/components/site/Reviews").then(m => ({ default: m.Reviews })));
+const Cities       = lazy(() => import("@/components/site/Cities").then(m => ({ default: m.Cities })));
+const LoveUs       = lazy(() => import("@/components/site/LoveUs").then(m => ({ default: m.LoveUs })));
+const PromoBanner  = lazy(() => import("@/components/site/PromoBanner").then(m => ({ default: m.PromoBanner })));
+const BookingForm  = lazy(() => import("@/components/site/BookingForm").then(m => ({ default: m.BookingForm })));
+const Gallery      = lazy(() => import("@/components/site/Gallery").then(m => ({ default: m.Gallery })));
+const Process      = lazy(() => import("@/components/site/Process").then(m => ({ default: m.Process })));
+const Faq          = lazy(() => import("@/components/site/Faq").then(m => ({ default: m.Faq })));
+const Contact      = lazy(() => import("@/components/site/Contact").then(m => ({ default: m.Contact })));
+const Footer       = lazy(() => import("@/components/site/Footer").then(m => ({ default: m.Footer })));
+const FloatingActions = lazy(() => import("@/components/site/FloatingActions").then(m => ({ default: m.FloatingActions })));
+
 import { CONTACT, FAQS, SERVICES, SLOGAN } from "@/lib/site-data";
+
 
 const SITE_URL = "https://ai-move-pro.lovable.app";
 const TITLE = "Packers & Movers Mumbai | GrowwIndia Home Shifting";
@@ -121,24 +128,31 @@ function Index() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        {/* Above fold — renders immediately */}
         <Hero />
         <OfferMarquee />
-        <WhyChooseUs />
-        <About />
-        <Services />
-        <DownloadApp />
-        <Reviews />
-        <Cities />
-        <LoveUs />
-        <PromoBanner />
-        <BookingForm />
-        <Gallery />
-        <Process />
-        <Faq />
-        <Contact />
+
+        {/* Below fold — loads lazily after first paint */}
+        <Suspense fallback={null}>
+          <WhyChooseUs />
+          <About />
+          <Services />
+          <DownloadApp />
+          <Reviews />
+          <Cities />
+          <LoveUs />
+          <PromoBanner />
+          <BookingForm />
+          <Gallery />
+          <Process />
+          <Faq />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
-      <FloatingActions />
+      <Suspense fallback={null}>
+        <Footer />
+        <FloatingActions />
+      </Suspense>
     </div>
   );
 }
