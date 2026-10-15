@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Use the Vercel Nitro preset for production builds.
+  // NITRO_PRESET env var on Vercel will auto-win, but this pins it for local builds too.
+  nitro: { preset: "vercel" },
 });
