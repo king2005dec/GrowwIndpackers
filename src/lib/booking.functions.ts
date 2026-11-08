@@ -16,7 +16,7 @@ const esc = (v: string) =>
   v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 export const sendBookingEmail = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => bookingSchema.parse(data))
+  .validator((data: unknown) => bookingSchema.parse(data))
   .handler(async ({ data }) => {
     const apiKey = process.env["RESEND_API_KEY"];
     if (!apiKey) throw new Error("RESEND_API_KEY is not configured");

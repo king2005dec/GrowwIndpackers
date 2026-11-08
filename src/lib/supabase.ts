@@ -2,13 +2,13 @@ import { createClient } from "@supabase/supabase-js";
 
 // Read Supabase credentials from environment variables
 const supabaseUrl =
-  import.meta.env.VITE_SUPABASE_URL ||
-  (typeof process !== "undefined" ? process.env.VITE_SUPABASE_URL : "") ||
+  import.meta.env["VITE_SUPABASE_URL"] ||
+  (typeof process !== "undefined" ? process.env["VITE_SUPABASE_URL"] : "") ||
   "https://jugggbaqtsqpxzlvmefz.supabase.co";
 
 const supabasePublishableKey =
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  (typeof process !== "undefined" ? process.env.VITE_SUPABASE_PUBLISHABLE_KEY : "") ||
+  import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ||
+  (typeof process !== "undefined" ? process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] : "") ||
   "sb_publishable_oGOOplqJBpTrZI72CFRZ0w_vD8xlDsW";
 
 if (!supabaseUrl || !supabasePublishableKey) {
