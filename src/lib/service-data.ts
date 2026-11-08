@@ -148,6 +148,20 @@ export const SERVICE_PAGES: ServicePage[] = [
       "Doorstep delivery in the destination city",
     ],
   },
+  {
+    slug: "international",
+    title: "International",
+    icon: "Globe",
+    short: "Overseas moves with customs clearance and door-to-door delivery.",
+    intro:
+      "Relocating abroad? We handle the entire journey — FCL/LCL container booking, export packing, customs documentation, insurance and last-mile delivery at the destination. One point of contact from India to anywhere in the world.",
+    includes: [
+      "FCL and LCL container options",
+      "Export-grade wooden crating",
+      "Customs clearance documentation",
+      "Marine transit insurance",
+    ],
+  },
 ];
 
 export const getService = (slug: string) => SERVICE_PAGES.find((s) => s.slug === slug);

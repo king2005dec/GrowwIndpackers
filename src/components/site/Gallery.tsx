@@ -1,4 +1,5 @@
 import realTruckRed from "@/assets/real-truck-red.jpg";
+import realTruckEicher from "@/assets/real-truck-eicher.jpg";
 import realTruckWhite from "@/assets/real-truck-white.jpg";
 import realHomePacking from "@/assets/real-home-packing.jpg";
 import realWarehouseStorage from "@/assets/real-warehouse-storage.jpg";
@@ -12,7 +13,7 @@ import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 const SHOTS = [
-  { src: realTruckRed, alt: "GrowwIndia S.M.D container moving truck", label: "S.M.D Container Truck", tall: true },
+  { src: realTruckEicher, alt: "GrowwIndia moving truck", label: "Truck", tall: true },
   { src: realHomePacking, alt: "Multi-layer stretch film household furniture packing", label: "Living Room Furniture Lamination" },
   { src: realTruckLoadedInside, alt: "Inside container truck loaded with stretch wrapped furniture", label: "Container Truck Loaded Cargo" },
   { src: realTruckWhite, alt: "Tata local shifting truck with covered tarpaulin", label: "Local Shifting Tata Truck", tall: true },

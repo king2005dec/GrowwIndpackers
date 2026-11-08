@@ -8,8 +8,8 @@ export const CONTACT = {
   email: "growwindpackers7667@gmail.com",
   officeName: "Groww India Packers and Movers",
   offices: [
-    "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West, Mumbai 400067",
-    "Shop 03, Shiv Building, Yadavji Sandwich, Swami Vivekanand Rd, Parsi Colony, Andheri West, Mumbai, Maharashtra 400058",
+    "D/40, Akurli Sahyog Society, Near Anudatt Vidyalaya School and Junior College, Mhada Road No. 3, Lokhandwala, Kandivali (E), Mumbai 400101",
+    "30/76 Sagar CHS, K C Road, Bandra Reclamation, Bandra West, Mumbai 400050",
   ],
 };
 

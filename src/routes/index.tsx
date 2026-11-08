@@ -48,19 +48,19 @@ const schema = {
         {
           "@type": "PostalAddress",
           streetAddress:
-            "Shop no 7, Raaj Apartment, near D'mart, Reddy Sai Nagar, Kandivali West",
+            "D/40, Akurli Sahyog Society, Near Anudatt Vidyalaya School and Junior College, Mhada Road No. 3, Lokhandwala, Kandivali (E)",
           addressLocality: "Mumbai",
           addressRegion: "Maharashtra",
-          postalCode: "400067",
+          postalCode: "400101",
           addressCountry: "IN",
         },
         {
           "@type": "PostalAddress",
           streetAddress:
-            "Shop 03, Shiv Building, Swami Vivekanand Rd, Parsi Colony, Andheri West",
+            "30/76 Sagar CHS, K C Road, Bandra Reclamation, Bandra West",
           addressLocality: "Mumbai",
           addressRegion: "Maharashtra",
-          postalCode: "400058",
+          postalCode: "400050",
           addressCountry: "IN",
         },
       ],

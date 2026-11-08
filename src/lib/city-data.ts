@@ -22,13 +22,13 @@ export const CITY_PAGES: CityPage[] = [
     name: "Mumbai",
     region: "Mumbai Metropolitan Region",
     state: "Maharashtra",
-    postalCode: "400067",
+    postalCode: "400101",
     lat: 19.2094,
     lng: 72.8404,
     moves: "2,480+ moves",
-    tagline: "Kandivali & Andheri crews, on-call 24×7",
+    tagline: "Kandivali & Bandra crews, on-call 24×7",
     intro:
-      "GrowwIndia is headquartered in Mumbai with shops in Kandivali West and Andheri West, so a supervisor can survey your flat the same day you call. Our crews know the city's tight society lanes, service-lift timings and the paperwork every housing society asks for before a move.",
+      "GrowwIndia is headquartered in Mumbai with shops in Kandivali East and Bandra West, so a supervisor can survey your flat the same day you call. Our crews know the city's tight society lanes, service-lift timings and the paperwork every housing society asks for before a move.",
     localNote:
       "Most Mumbai buildings only allow shifting between 8am and 8pm and many charge a refundable lift deposit — your move manager arranges the society NOC and gate pass so the truck is never turned away.",
     areas: [

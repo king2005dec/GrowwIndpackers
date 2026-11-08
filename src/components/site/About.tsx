@@ -39,9 +39,9 @@ export function About() {
               A moving partner your family can actually trust
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              GrowwIndia started in 2015 with four trucks in Bengaluru. Today we operate a vetted
+              GrowwIndia started in 2015 with four trucks in Mumbai. Today we operate a vetted
               network of 500+ partner crews across 120 cities, moving more than 10,000 homes and
-              offices a year. Every crew is verified, every carton is barcoded, and every rupee on
+              offices a year. Every crew is verified and every rupee on
               your invoice is explained upfront.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
